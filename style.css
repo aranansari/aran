@@ -21,11 +21,13 @@ body {
 
 
 #icon{
-    margin:fill;
+    margin: 0 auto;
+    width: 0%;
+    height:60px;
 }
 
 #icon img{
-    max-width:100px;
+    max-width:40px;
 }
 
 #about-section{
