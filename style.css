@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:wght@300;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 
-body {
+body{
+	font-family:'Caudex',serif;
+}
+
+#color-background {
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: fit-content;
+	width:100%;
 }
 
 @keyframes gradient {
@@ -19,10 +26,14 @@ body {
 	}
 }
 
+body{
+	padding:0;
+	margin:0;
+}
 
 #icon{
     margin: 0 auto;
-    width: 0%;
+    width: 60%;
     height:60px;
 }
 
@@ -30,18 +41,76 @@ body {
     max-width:40px;
 }
 
+.item1 { grid-area: name; }
+.item2 { grid-area: subtitle; }
+.item3 { grid-area: propic; }
+
 #about-section{
     margin:auto;
     max-width:60%;
+	display:grid;
+	grid-template-columns: auto auto;
+	gap:10px;
+	grid-row-gap:30px;
+	grid-template-rows: 150px 100px 272px;
 }
 
 #title{
-    font-size:100px;
-    font-family: 'Josefin Sans';
+    font-size:80px;
+	grid-row-start:1;
+	grid-column-start:1;
+	grid-row-end:2;
+	font-weight:bold;
 }
 
+#position{
+	font-size:50px;
+	grid-column-start: 1;
+	grid-row-start: 2;
+	font-weight:bold;
+	grid-row-end: 3;
+}
+
+#subtitle{
+	grid-column-start: 1;
+	grid-row-start: 3;
+}
+
+.propic{
+	grid-row-start:2;
+	grid-row-end:4;
+	height:400px;
+	width:auto;
+}
+
+#about-me{
+	width:60%;
+	margin:auto;
+	padding-top:25px;
+	-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 70%, 0 35%, 0 0);
+    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 50% 70%, 0 35%, 0) ;
+}
+
+#about-me-pic{
+	height:200px;
+	width:auto;
+}
+
+#about-me-title{
+	font-size:50px;
+	font-weight: bold;
+	margin:auto;
+	text-align:center;
+	padding-bottom:25px;
+}
+
+#about-me-content{
+	display:flex;
+	flex-direction:row;
+}
 
 #project-section{
     margin:auto;
     max-width:80%;
+	height:800px;
 }
