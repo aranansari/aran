@@ -3,35 +3,48 @@
     <head>
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="style.css"/>
-        <link rel="icon" href="images/Frame 3.png">
+        <link rel="icon" href="images/icon.png">
         <title>Aran Ansari</title>
     </head>
     <body>
-
-        <div id="color-background">
-        <div id="icon">
-           <!-- <img src="Frame 3.png"> -->
-        </div>
+        <div id="color-background">        
+        <nav id="nav-bar" class="flexbox">
+        <img id="icon" src="icon.png">
+        <ul>
+            <li class="nav-items"><a href="#" id="text">About Me</a></li>
+            <li class="nav-items"><a href="#" id="text">Resume</a></li>
+        </ul>
+        </nav> 
             <div id="about-section">
             <p id="title" class="name">Aran Ansari</p>
-            <p id="position">Product Manager</p>
-            <p id="subtitle" class="subtitle">
-            I'm looking to help build products that make things easier, faster, and more accessible - <b>in the real world.</b>
-            <br>
-            <br>
-            Currently living in the great city of Somerville, Massachusetts.‍</p>
-            <img class="propic" src="coolpropicnobg.png">
+            <p id="subtitle" style="font-weight:100px;">
+            I am a <a id="underline"><b>Product Manager</b></a> building products that expand access and affect real lives.</p>
+            <div class="propic-border"><img class="propic" src="boston skyline pic 2.png"></div>
         </div>
         </div>
+        <div id="second-container">
         <div id="about-me">
             <p id="about-me-title">About Me</p>
-            <div id ="about-me-content">
-                <img id="about-me-pic" src="head_nobg.png">
-                <p>About me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me ParagraphAbout me Paragraph</p>
+            <div id ="text">
+                <p>I'm looking to help build products that make things <i>easier, faster, and more accessible</i> -<b> in the real world. </b></p>
+                <p>Things you can <i><b>feel, taste, hear, and smell.</b></i></p>
+                <p>Currently living in the great city of Somerville, Massachusetts and building the SMB Investment Marketplace - <a href="https://mainvest.com"><b>Mainvest</b></a></p>
             </div>
         </div>
+        </div>
         <div id="project-section">
-
+        <h1 id="subtitle">Portfolio</h1>
+            <div id="projects">
+                <div id="main-project">
+                    <img src="Homepage preview.png" id="main-image">
+                    <h1 id="company">Mainvest</h1>
+                    <h2 id="position">Product Manager 2019 - 2022</h2>
+                    <p id="description">Responsible for the product development cycle for the seed-stage Small Business Investment Marketplace</p>
+                    <button id="learnmore">Learn More</button>
+                </div>
+                <div id="second-project">WFA Directory</div>
+                <div id="third-project">Slack Spotify</div>
+            </div>
         </div>
     </body>
 </html>
