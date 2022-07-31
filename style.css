@@ -250,6 +250,12 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 800px) {
+  #title {
+    font-size: 60px;
+  }
+}
+
 #subtitle {
   font-size: 40px;
   -ms-grid-column: 1;
@@ -262,6 +268,12 @@ body {
   right: 0px;
   bottom: 0px;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  #subtitle {
+    font-size: 30px;
+  }
 }
 
 #text {
@@ -408,7 +420,7 @@ body {
 
 @media (max-width: 800px) {
   #project-section {
-    width: 80%;
+    max-width: 90%;
   }
 }
 
@@ -434,8 +446,8 @@ body {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 55% 40%;
-      grid-template-columns: 55% 40%;
+  -ms-grid-columns: 53% 40%;
+      grid-template-columns: 53% 40%;
   grid-column-gap: 5%;
   -ms-grid-rows: 70px 35px 150px 35px;
       grid-template-rows: 70px 35px 150px 35px;
@@ -529,6 +541,7 @@ body {
 
 #main-image {
   width: 100%;
+  height: auto;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 2;
