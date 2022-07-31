@@ -422,6 +422,9 @@ body{
 	font-size:25px;
 	font-weight:lighter;
 	margin-block-start: -15px;
+	@media (max-width:800px){
+		font-size:15px;
+	}
 }
 
 
