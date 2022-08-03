@@ -2,8 +2,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caudex&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-$mainFont: 'Playfair Display';
+@font-face {font-family: "Windsor BT W01 Elongated";
+	src: url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot'); /* IE9*/
+	src: url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot?#iefix') format("embedded-opentype"), /* IE6-IE8 */
+	url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff2') format("woff2"), /* chrome、firefox */
+	url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff') format("woff"), /* chrome、firefox */
+	url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.ttf') format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor\ BT\ W01\ Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.svg#Windsor BT W01 Elongated') format("svg"); /* iOS 4.1- */
+  }
+
+
+$mainFont: "Space Mono";
+$secondaryFont: "Space Mono";
 $linkPink: rgb(216, 29, 216);
 $linkPurple: rgb(98, 16, 250);
 
@@ -190,7 +202,8 @@ body{
 }
 
 #subtitle{
-	font-size:40px;
+	font-family: $secondaryFont, serif;
+	font-size:30px;
 	grid-column-start: 1;
 	grid-row-start: 2;
 	font-weight:light;
@@ -330,16 +343,23 @@ body{
 	gap:30px;
 }
 
+#card-content{
+	display:flex;
+	flex-direction:column;
+}
+
+#card-image{
+	height:100%;
+}
+
 #main-project{
 	padding:40px;
 	background-color:white;
 	border-radius:15px;
+	gap:20px;
 	height:fit-content;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	display:grid;
-	grid-template-columns: 53% 40%;
-	grid-column-gap: 5%;
-	grid-template-rows: 70px 35px 150px 35px;
+	display:flex;
 	padding:20px 20px 20px 20px;
 	font-family:$mainFont,serif;
 	transition: box-shadow .3s;

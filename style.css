@@ -2,8 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caudex&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@font-face {
+  font-family: "Windsor BT W01 Elongated";
+  src: url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot");
+  /* IE9*/
+  src: url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot?#iefix") format("embedded-opentype"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff2") format("woff2"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff") format("woff"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.ttf") format("truetype"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.svg#Windsor BT W01 Elongated") format("svg");
+  /* iOS 4.1- */
+}
+
 body {
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", serif;
   z-index: -2;
 }
 
@@ -251,7 +260,8 @@ body {
 }
 
 #subtitle {
-  font-size: 40px;
+  font-family: "Space Mono", serif;
+  font-size: 30px;
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-row: 2;
@@ -421,7 +431,7 @@ body {
   max-width: 60%;
   height: 800px;
   padding-top: 25px;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", serif;
 }
 
 @media (max-width: 800px) {
@@ -437,28 +447,39 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", serif;
   gap: 30px;
+}
+
+#card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#card-image {
+  height: 100%;
 }
 
 #main-project {
   padding: 40px;
   background-color: white;
   border-radius: 15px;
+  gap: 20px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 53% 40%;
-      grid-template-columns: 53% 40%;
-  grid-column-gap: 5%;
-  -ms-grid-rows: 70px 35px 150px 35px;
-      grid-template-rows: 70px 35px 150px 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   padding: 20px 20px 20px 20px;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", serif;
   -webkit-transition: -webkit-box-shadow .3s;
   transition: -webkit-box-shadow .3s;
   transition: box-shadow .3s;
@@ -624,7 +645,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  font-family: "Playfair Display", serif;
+  font-family: "Space Mono", serif;
   font-weight: 300;
   color: black;
   text-align: center;
