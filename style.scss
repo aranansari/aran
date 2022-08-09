@@ -20,7 +20,7 @@ $linkPink: rgb(216, 29, 216);
 $linkPurple: rgb(98, 16, 250);
 
 body{
-	font-family:$mainFont,serif;
+	font-family:$secondaryFont,serif;
 	z-index:-2;
 }
 
@@ -33,7 +33,7 @@ body{
 	right: 0px;
 	bottom: -3px;
 	left: 0px;
-	background-color: white;
+	background-color: #ffffff;
 	text-decoration:none;
 }
 
@@ -188,22 +188,25 @@ body{
 }
 
 #about-text{
-	align-items:center;
+	align-items:end;
 }
 
 #title{
-    font-size:80px;
+    font-size:70px;
+	font-family: $mainFont;
 	font-weight:bold;
 	padding: 0px;
 	margin: 0 auto;
+	padding-left:10px;
 	@media (max-width: 800px){
 		font-size:60px;
+		padding-left:0px;
 	}
 }
 
 #subtitle{
 	font-family: $secondaryFont, serif;
-	font-size:30px;
+	font-size:25px;
 	grid-column-start: 1;
 	grid-row-start: 2;
 	font-weight:light;
@@ -212,8 +215,10 @@ body{
 	right: 0px;
 	bottom: 0px;
 	margin: 0 auto;
+	padding-left:10px;
 	@media (max-width: 800px){
 		font-size:30px;
+		padding-left:0px;
 	}
 	
 }
@@ -327,9 +332,10 @@ body{
 #project-section{
     margin:0 auto;
     max-width:60%;
-	height:800px;
+	height:fit-content;
 	padding-top:25px;
-	font-family:$mainFont,serif;
+	padding-bottom:25px;
+	font-family:$secondaryFont,serif;
 	@media (max-width:800px){
 		max-width:90%;
 	}
@@ -339,7 +345,7 @@ body{
 	padding-top:25px;
 	display:flex;
 	flex-wrap:wrap;
-	font-family:$mainFont,serif;
+	font-family:$secondaryFont,serif;
 	gap:30px;
 }
 
@@ -361,7 +367,7 @@ body{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	display:flex;
 	padding:20px 20px 20px 20px;
-	font-family:$mainFont,serif;
+	font-family:$secondaryFont,serif;
 	transition: box-shadow .3s;
 	transition: all .2s ease-in-out;
 	@media (max-width:800px){
@@ -498,52 +504,74 @@ body{
 	}
 }
 
-#end-section{
-	height:300px;
+#footer{
+	height:fit-content;
+	width:100%;
+	display:flex;
+	background-color:white;
+	padding-top:25px;
+	background: linear-gradient(-45deg, $linkPink,$linkPurple, #23d5ab);
+	animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#footer-text{
+	width:60%;
+	margin: 0 auto;
+	color:white;
+	font-weight:bold;
+	@media (max-width: 800px){
+		width:80%;
+	}
+}
 
 #about-sectionWFA{
     margin:auto;
     max-width:60%;
-	height:600px;
+	height:fit-content;
 	padding-bottom: 20px;
-	display:grid;
+	display:flex;
 	gap:10px;
-	grid-row-gap:30px;
-	grid-template-rows: 100px 150px 100px;
 	z-index: -2;
+	align-items:center;
+	@media (max-width:800px){
+		padding-top:20px;
+		flex-direction: column;
+		flex-wrap:wrap;
+		align-items:center;
+		justify-content: center;
+		max-width:80%;
+		text-align:center;
+	}
 }
+
+
 
 .propicWFA{
 	position: relative;
 	width:350px;
-	align-self: middle;
-	border-radius: 40px;
-	grid-row-start: 1;
+	align-self: flex-end;
+	@media (max-width:800px){
+		align-self: center;
+		justify-content:center;
+	}
 }
 
 
-#titleWFA{
-    font-size:80px;
-	grid-column-start:2;
-	grid-row-end:3;
-	font-weight:bold;
-	margin-left: 100px;
-}
 
-#subtitleWFA{
-	font-size:40px;
-	grid-column-start: 2;
-	grid-row-start: 3;
-	font-weight:light;
-	grid-row-end: 4;
-	height: 0px important;
-	right: 0px;
-	bottom: 0px;
-	margin: 0 auto;
-	margin-left: 100px;
-}
 
 #textWFA{
 	grid-column-start: 2;
@@ -554,14 +582,6 @@ body{
 }
 
 
-#about-meWFA{
-    margin:auto;
-    max-width:60%;
-	display:grid;
-	grid-template-columns: auto auto;
-	gap:10px;
-	z-index: -2;
-}
 
 #second-containerWFA{
 	width:100%;
@@ -614,6 +634,21 @@ body{
 	text-align: center;
 }
 
+#project-sectionMV{
+		margin:0 auto;
+		color: black;
+		max-width:60%;
+		height:100%;
+		padding-bottom:25px;
+		padding-top:25px;
+		font-size:15px;
+		font-family:$secondaryFont,serif;
+		@media (max-width:800px){
+			max-width:90%;
+		}
+}
+
+
 #icon-link:before{
 	content:'';
 	height:0px;
@@ -656,4 +691,33 @@ body{
 #about-meMV{
 	width:60%;
 	margin:0 auto;
+	padding-top:25px;
+	background:white;
+	@media (max-width:800px){
+		width:80%;
+	}
+}
+
+#companyMV{
+
+		grid-column-start:2;
+		grid-column-end:3;
+		grid-row-start:1;
+		grid-row-end:2;
+		font-size:25px;
+		padding-bottom:10px;
+	}
+
+
+#descriptionMV{
+	grid-column-start:2;
+	grid-column-end:3;
+	grid-row-start:3;
+	grid-row-end:4;
+	font-size:15px;
+	font-weight:lighter;
+	margin-block-start: -15px;
+	@media (max-width:800px){
+		font-size:10px;
+	}
 }
