@@ -642,6 +642,8 @@ body {
   grid-row-end: 5;
   margin: 0 auto;
   width: 100%;
+  -ms-flex-line-pack: end;
+      align-content: end;
 }
 
 .button1 {
@@ -766,6 +768,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 250px;
   }
 }
 

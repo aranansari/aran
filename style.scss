@@ -476,6 +476,7 @@ body{
 	grid-row-end:5;
 	margin: 0 auto;
 	width:100%;
+	align-content:end;
 }
 
 
@@ -569,6 +570,7 @@ body{
 	@media (max-width:800px){
 		align-self: center;
 		justify-content:center;
+		width:250px;
 	}
 }
 
