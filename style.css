@@ -36,7 +36,9 @@ body {
 }
 
 body {
-  background: #CAD9F4;
+  background: linear-gradient(45deg, #CAD9F4, #D7CAF4, #F4D2CA, #F4E8CA);
+  -webkit-animation: gradient 30s ease infinite;
+          animation: gradient 30s ease infinite;
   background-size: 400% 400%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
