@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Windows 97 Homescreen</title>
+	<style>
+        
+
+        
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+		body {
+            cursor: url('images/windows_cursor.png');
+			background-color: #008080;
+			background-image: url('https://i.imgur.com/3c59gbH.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+            font-family: VT323, sans-serif;
+			margin: 0;
+		}
+
+        #desktop-icons {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            top: 20px;
+            left: 20px;
+            color: white;
+            }
+
+        #desktop-icons a {
+            text-decoration: none;
+            color:white;
+        }
+        .desktop-icon {
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .desktop-label {
+            margin-top: 5px;
+            font-family: VT323, sans-serif;
+            font-size: 16px;
+            text-align: center;
+            }
+
+
+		#taskbar {
+			background-color: #c3c3c2ff;
+			border-top: 3px solid #e5eff4ff;
+			bottom: 0;
+			height: 40px;
+			position: fixed;
+			width: 100%;
+		}
+
+		#start-button {
+			background-color: #008080;
+            background-image: url('images/win95s.0.gif');
+            background-size: cover;
+			border-radius: 5px;
+			color: #ffffff;
+			cursor: pointer;
+			height: 100%;
+            width: 90px;
+		}
+
+		
+        #start-menu {
+            background-color: #c3c3c2ff;
+            border-top: 2px solid #e5eff4ff;
+            border-left: 2px solid #e5eff4ff;
+            border-bottom: 2px solid #000000;
+            border-right: 2px solid #000000;
+            box-shadow: 1px 1px 1px #000000;
+            display: none;
+            margin-top: -1px; /* add to align with taskbar */
+            position: absolute;
+            height:60%;
+            bottom:40px;
+            left: 0; /* align to the left */
+            width: 200px;
+        }
+
+        #start-menu-image {
+            display: inline-block;
+            height:100%;
+            width: auto;
+        }
+
+        #microsoft-98-image{
+            height:100%;
+        }
+
+        #start-menu-options {
+            display: flex;
+            margin: 0px;
+            vertical-align: top;
+            width: 100%;
+        }
+
+        #start-menu-options ul {
+            font-size: 20px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width:100%;
+        }
+
+        #start-menu-options li {
+            color: #000000;
+            margin-bottom: 0;
+            height: calc(100%/7);
+            align-items: center;
+            display:flex;
+            text-decoration: none;
+        }
+
+
+        #start-menu-options li:hover {
+            background-color: #000080ff;
+            color: #ffffff !important;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        #start-menu-options li img {
+            margin:5px;
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+            image-rendering: pixelated;
+            }
+
+        #start-menu-options li a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+
+        #start-menu-options li:hover a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+
+        #iframe-container {
+            background: linear-gradient(to right, #000080ff,#1b7dcbff);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -50%);
+            border-top: 2px solid #c3c3c2ff;
+            border-right: 2px solid #c3c3c2ff;
+            border-bottom: 2px solid #c3c3c2ff;
+            border-left: 2px solid #c3c3c2ff;
+            display: none;
+            width: 60%;
+            height: 70%;
+            z-index: 999;
+            overflow: hidden;
+            }
+
+        #iframe-close-button {
+            position: absolute;
+            padding:0px;
+            background-color: #c3c3c2ff;
+            top: -2px;
+            margin: 3px;
+            right: 0;
+            height:20px;
+            font-size: 24px;
+            cursor: pointer;
+            font-family: Helvetica, sans-serif;
+            border: 2px solid black;
+            text-align: center;
+            vertical-align: middle;
+            }
+        
+        #iframe-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+	</style>
+</head>
+<body>
+    <div id="desktop-icons">
+        <a>
+            <div class="desktop-icon" data-src="Aran Ansari Resume.pdf">
+                <img src="https://i.pinimg.com/originals/27/62/2d/27622da55071a4045a0b4a8349d1f481.png" height="48" width="48">
+                <div class="desktop-label">Resume</div>
+            </div>
+        </a>
+        <a>
+            <div id="mainvest-icon" class="desktop-icon" data-src="./mainvest.html">
+                <img src="images/mv-logo.webp" alt="Mainvest Icon" height="48" width="48">
+                <div class="desktop-label">Mainvest</div>
+            </div>
+        </a>
+        <a>   
+            <div class="desktop-icon" data-src="./wfa.html">
+                <img src="images/anywhere_icon.png" alt="Anywhere Icon" height="48" width="48">
+                <div class="desktop-label">Anywhere</div>
+            </div>
+        </a>
+        <a>
+            <div class="desktop-icon" data-src="./mixtape.html">
+                <img src="images/cassette-tape 7.png" alt="Mixtape Icon" height="48" width="48">
+                <div class="desktop-label">Mixtape</div>
+            </div>
+        </a>
+        <a>
+            <div class="desktop-icon" data-src="./index.html">
+                <img src="images/website_icon.png" alt="Homepage Icon" height="48" width="48">
+                <div class="desktop-label">Homepage</div>
+            </div>
+        </a>
+        <a>
+            <div class="desktop-icon"  data-src="./about.html">
+                <img src="images/boston skyline pic 2.png" alt="About Icon" height="48" width="48">
+                <div class="desktop-label">About</div>
+            </div>
+        </a>
+      </div>
+      
+    
+<!-- HTML code for the iframe -->
+<div id="iframe-container">
+    <a style="color:white; font-size: 24px; justify-items: middle; padding: 2px;">Browser</a>
+    <iframe id="app-iframe" frameborder="1"></iframe>
+    <div id="iframe-close-button">&times;</div>
+</div>
+
+	<div id="taskbar">
+		<div id="start-button"></div>
+	</div>
+
+	<div id="start-menu">
+        <div id="start-menu-image">
+            <img src="images/windows98.png" id="microsoft-98-image">
+        </div>
+        <div id="start-menu-options">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/aranansari/" target="_blank">
+                    <img id="start-menu-option-icons" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/0baeb31aedf8e64.png">
+                    <a><u>L</u>inkedIn</a>
+                    </a>
+                </li>
+                </a>
+            <a href="mailto:amgansari@gmail.com" target="_blank" >
+                <li>
+                    <img id="start-menu-option-icons" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/c7ed6c296fe0be7.png">
+                    <a href="mailto:amgansari@gmail.com" target="_blank" ><u>G</u>Mail</a>
+                </li>
+            </a>
+                <a href="https://github.com/aranansari" target="_blank" >
+                <li>
+                    <img id="start-menu-option-icons" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/03791199dd1b9c9.png">
+                    <a href="https://github.com/aranansari" target="_blank" ><u>G</u>ithub</a>
+                </li>
+                </a>
+                <li>
+                    <img id="start-menu-option-icons" src="https://cdn4.iconfinder.com/data/icons/random-8-bit-pixel/512/smartphone-512.png" >
+                    <a href="tel:781-888-4057" target="_blank" ><u>P</u>hone</a>
+                </li>
+                </a>
+                <li>
+                    <img id="start-menu-option-icons" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ae498566451d9a8.png">
+                    <a href="https://open.spotify.com/user/12587690?si=295e6d551e424805" target="_blank" ><u>S</u>potify</a>
+                </li>
+            </a>
+                <li>
+                    <img id="start-menu-option-icons" src="https://play-lh.googleusercontent.com/wZa8ZTV09nrxME6OzWIKxik9kcRcbI-k0Xx_c2bqz4n2rmMqMwV4fcmGwQP_g3OY3Q">
+                    <a href="https://substack.com/profile/29051545-aran-ansari?utm_source=%2Fprofile%2F29051545-aran-ansari&utm_medium=reader2-nav" target="_blank" ><u>S</u>ubstack</a>
+                </li>
+            </a>
+                <li>
+                    <img id="start-menu-option-icons" src="https://www.seekpng.com/png/detail/968-9686952_settings-icon-disegni-pixel-art-animali.png"  height="16" width="16">
+                    <a href="#"><u>S</u>ettings</a>
+                </li>
+		</ul>
+	</div>
+
+	<script>
+		var startButton = document.getElementById("start-button");
+		var startMenu = document.getElementById("start-menu");
+        startMenu.style.display = "none";
+        
+        startButton.addEventListener("click", function() {
+            console.log("Menu button clicked!");
+            console.log("startMenu.style.display:", startMenu.style.display);
+            if (startMenu.style.display === "none") {
+                startMenu.style.display = "flex";
+            } else {
+                startMenu.style.display = "none";
+            }
+            console.log("startMenu.style.display:", startMenu.style.display);
+        });
+
+        const appIframe = document.getElementById("app-iframe");
+        const iframeContainer = document.getElementById("iframe-container");
+        const iframeCloseButton = document.getElementById("iframe-close-button");
+        const desktopIcons = document.querySelectorAll(".desktop-icon");
+
+        function openIframe(src) {
+        appIframe.src = src;
+        iframeContainer.style.display = "block";
+        }
+
+        function closeIframe() {
+        appIframe.src = "";
+        iframeContainer.style.display = "none";
+        }
+
+        desktopIcons.forEach(function(desktopIcon) {
+        desktopIcon.addEventListener("click", function() {
+            const src = desktopIcon.getAttribute("data-src");
+            openIframe(src);
+        });
+        });
+
+        iframeCloseButton.addEventListener("click", function() {
+        closeIframe();
+        });
+	</script>
+</body>
+</html>
