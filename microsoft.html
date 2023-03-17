@@ -19,12 +19,18 @@
         #desktop-icons {
             position: absolute;
             display: flex;
-            flex-direction: column;
+            height:100%;
             top: 20px;
             left: 20px;
             color: white;
+            column-gap: 40px;
             }
-
+        
+        #desktop-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
         #desktop-icons a {
             text-decoration: none;
             color:white;
@@ -188,50 +194,81 @@
 </head>
 <body>
     <div id="desktop-icons">
-        <a>
-            <div class="desktop-icon" data-src="Aran Ansari Resume.pdf">
-                <img src="https://i.pinimg.com/originals/27/62/2d/27622da55071a4045a0b4a8349d1f481.png" height="48" width="48">
-                <div class="desktop-label">Resume</div>
-            </div>
-        </a>
-        <a>
-            <div id="mainvest-icon" class="desktop-icon" data-src="./mainvest.html">
-                <img src="images/mv-logo.webp" alt="Mainvest Icon" height="48" width="48">
-                <div class="desktop-label">Mainvest</div>
-            </div>
-        </a>
-        <a>   
-            <div class="desktop-icon" data-src="./wfa.html">
-                <img src="images/anywhere_icon.png" alt="Anywhere Icon" height="48" width="48">
-                <div class="desktop-label">Anywhere</div>
-            </div>
-        </a>
-        <a>
-            <div class="desktop-icon" data-src="./mixtape.html">
-                <img src="images/cassette-tape 7.png" alt="Mixtape Icon" height="48" width="48">
-                <div class="desktop-label">Mixtape</div>
-            </div>
-        </a>
-        <a>
-            <div class="desktop-icon" data-src="./index.html">
-                <img src="images/website_icon.png" alt="Homepage Icon" height="48" width="48">
-                <div class="desktop-label">Homepage</div>
-            </div>
-        </a>
-        <a>
-            <div class="desktop-icon"  data-src="./about.html">
-                <img src="images/boston skyline pic 2.png" alt="About Icon" height="48" width="48">
-                <div class="desktop-label">About</div>
-            </div>
-        </a>
-      </div>
+        <div id="desktop-column">
+            <a>
+                <div class="desktop-icon" data-src="Aran Ansari Resume.pdf">
+                    <img src="https://i.pinimg.com/originals/27/62/2d/27622da55071a4045a0b4a8349d1f481.png" height="48" width="48">
+                    <div class="desktop-label">Resume</div>
+                </div>
+            </a>
+            <a>
+                <div id="mainvest-icon" class="desktop-icon" data-src="./mainvest.html">
+                    <img src="images/mv-logo.webp" alt="Mainvest Icon" height="48" width="48">
+                    <div class="desktop-label">Mainvest</div>
+                </div>
+            </a>
+            <a>   
+                <div class="desktop-icon" data-src="./wfa.html">
+                    <img src="images/anywhere_icon.png" alt="Anywhere Icon" height="48" width="48">
+                    <div class="desktop-label">Anywhere</div>
+                </div>
+            </a>
+            <a>
+                <div class="desktop-icon" data-src="./mixtape.html">
+                    <img src="images/cassette-tape 7.png" alt="Mixtape Icon" height="48" width="48">
+                    <div class="desktop-label">Mixtape</div>
+                </div>
+            </a>
+            <a>
+                <div class="desktop-icon" data-src="./index.html">
+                    <img src="images/website_icon.png" alt="Homepage Icon" height="48" width="48">
+                    <div class="desktop-label">Homepage</div>
+                </div>
+            </a>
+            <a>
+                <div class="desktop-icon"  data-src="./about.html">
+                    <img src="images/boston skyline pic 2.png" alt="About Icon" height="48" width="48">
+                    <div class="desktop-label">About</div>
+                </div>
+            </a>
+        </div>
+        <div id="desktop-column">
+            <a>
+                <div class="desktop-icon" data-src="https://www.linkedin.com/in/aranansari/">
+                    <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/0baeb31aedf8e64.png" alt="LinkedIn Icon" height="48" width="48">
+                    <div class="desktop-label">LinkedIn</div>
+                </div>
+            </a>
+            
+            <a>
+                <div class="desktop-icon" data-src="https://github.com/aranansari">
+                    <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/03791199dd1b9c9.png" alt="Github Icon" height="48" width="48">
+                    <div class="desktop-label">Github</div>
+                </div>
+            </a>
+            
+            <a>
+                <div class="desktop-icon" data-src="https://open.spotify.com/user/12587690?si=295e6d551e424805">
+                    <img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/ae498566451d9a8.png" alt="Spotify Icon" height="48" width="48">
+                    <div class="desktop-label">Spotify</div>
+                </div>
+            </a>
+            
+            <a>
+                <div class="desktop-icon" data-src="https://substack.com/profile/29051545-aran-ansari?utm_source=%2Fprofile%2F29051545-aran-ansari&utm_medium=reader2-nav">
+                    <img src="https://play-lh.googleusercontent.com/wZa8ZTV09nrxME6OzWIKxik9kcRcbI-k0Xx_c2bqz4n2rmMqMwV4fcmGwQP_g3OY3Q" alt="Substack Icon" height="48" width="48">
+                    <div class="desktop-label">Substack</div>
+                </div>
+            </a>
+        </div>
+    </div>
       
     
 <!-- HTML code for the iframe -->
 <div id="iframe-container">
     <a style="color:white; font-size: 24px; justify-items: middle; padding: 2px;">Browser</a>
     <iframe id="app-iframe" frameborder="1"></iframe>
-    <div id="iframe-close-button">&times;</div>
+    <img id="iframe-close-button" src="images/X button.png" alt="X">
 </div>
 
 	<div id="taskbar">
