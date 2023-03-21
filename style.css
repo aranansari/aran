@@ -757,7 +757,7 @@ body {
 
 .propicWFA {
   position: relative;
-  width: 350px;
+  width: 50%;
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
