@@ -56,7 +56,9 @@ body {
 }
 
 #bodySS {
-  background: #5B9575;
+  background: linear-gradient(-45deg, #d81dd8, #6210fa, #23d5ab);
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
 }
 
 #bodyAbout {
@@ -231,6 +233,46 @@ body {
     padding-top: 20px;
     -ms-flex-wrap: wrap-reverse;
         flex-wrap: wrap-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 80%;
+    text-align: center;
+  }
+}
+
+#about-sectionMT {
+  margin: auto;
+  max-width: 60%;
+  min-height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 800px) {
+  #about-sectionMT {
+    padding-top: 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

@@ -63,7 +63,8 @@ body{
 }
 
 #bodySS{
-	background: #5B9575;
+	background: linear-gradient(-45deg, $linkPink,$linkPurple, #23d5ab);
+	animation: gradient 15s ease infinite;
 }
 #bodyAbout{
 	background: #F2DAB5;
@@ -181,6 +182,28 @@ body{
 	@media (max-width:800px){
 		padding-top:20px;
 		flex-wrap:wrap-reverse;
+		align-items:center;
+		justify-content: center;
+		max-width:80%;
+		text-align:center;
+	}
+}
+
+
+#about-sectionMT{
+    margin:auto;
+    max-width:60%;
+	min-height:400px;
+	display:flex;
+	flex-direction: row;
+	height:fit-content;
+	justify-content: space-between;
+	align-items:flex-end;
+	gap:30px;
+	padding-bottom:40px;
+	@media (max-width:800px){
+		padding-top:20px;
+		flex-wrap:wrap;
 		align-items:center;
 		justify-content: center;
 		max-width:80%;
