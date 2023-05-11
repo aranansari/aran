@@ -3,16 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Caudex&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@font-face {
-  font-family: "Windsor BT W01 Elongated";
-  src: url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot");
-  /* IE9*/
-  src: url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.eot?#iefix") format("embedded-opentype"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff2") format("woff2"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.woff") format("woff"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.ttf") format("truetype"), url("./OnlineWebFonts_COM_e54341304ac33ebbf08f12e59d95f5bc/Windsor BT W01 Elongated/@font-face/1ad6be8a39714ee87c44d652568bbb5b.svg#Windsor BT W01 Elongated") format("svg");
-  /* iOS 4.1- */
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
   z-index: -2;
 }
 
@@ -90,7 +83,7 @@ body {
 }
 
 h1 {
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 0;
 }
 
@@ -168,6 +161,7 @@ nav.flexbox {
 a {
   position: relative;
   text-decoration: none;
+  font-weight: 200;
 }
 
 a::before {
@@ -222,6 +216,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  justify-self: center;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -292,7 +287,7 @@ body {
 
 #title {
   font-size: 70px;
-  font-family: "Space Mono";
+  font-family: "Raleway";
   font-weight: bold;
   padding: 0px;
   margin: 0 auto;
@@ -307,7 +302,7 @@ body {
 }
 
 #subtitle {
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
   font-size: 25px;
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -483,7 +478,7 @@ body {
   height: fit-content;
   padding-top: 25px;
   padding-bottom: 25px;
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
 }
 
 @media (max-width: 800px) {
@@ -499,7 +494,7 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
   gap: 30px;
 }
 
@@ -531,7 +526,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 20px 20px 20px 20px;
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
   -webkit-transition: -webkit-box-shadow .3s;
   transition: -webkit-box-shadow .3s;
   transition: box-shadow .3s;
@@ -629,6 +624,7 @@ body {
 @media (max-width: 800px) {
   #main-image {
     height: auto !important;
+    width: 100%;
   }
 }
 
@@ -699,7 +695,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
   font-weight: 300;
   color: black;
   text-align: center;
@@ -886,7 +882,7 @@ body {
   padding-bottom: 25px;
   padding-top: 25px;
   font-size: 15px;
-  font-family: "Space Mono", serif;
+  font-family: "Raleway", serif;
 }
 
 @media (max-width: 800px) {
@@ -992,5 +988,45 @@ body {
   #descriptionMV {
     font-size: 10px;
   }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  -webkit-transition: opacity 5s, -webkit-transform 2s;
+  transition: opacity 5s, -webkit-transform 2s;
+  transition: opacity 5s, transform 2s;
+  transition: opacity 5s, transform 2s, -webkit-transform 2s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.fade-in-scroll {
+  opacity: 0;
+  -webkit-transition: opacity 5s, -webkit-transform 2s;
+  transition: opacity 5s, -webkit-transform 2s;
+  transition: opacity 5s, transform 2s;
+  transition: opacity 5s, transform 2s, -webkit-transform 2s;
+}
+
+.fade-in-scroll.show {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.right {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.left {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 /*# sourceMappingURL=style.css.map */

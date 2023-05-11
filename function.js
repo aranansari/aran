@@ -129,13 +129,27 @@ function getAge(dateString) {
     return ageString;
   }
   
-  // A bit of jQuery to call the getAge() function and update the page...
-  $(document).ready(function() {
-    $("#submitDate").click(function(e) {
-      e.preventDefault();
+  function fadeInOnScroll() {
+    var fadeElements = document.querySelectorAll(".fade-in-scroll");
+    
+    fadeElements.forEach(function(element) {
+      var elementPosition = element.getBoundingClientRect().top;
+      var windowHeight = window.innerHeight * 0.75;
+      
+      if (elementPosition < windowHeight) {
+        element.classList.add("show");
+      }
+    });
+  }
   
-      $("#age").html(getAge($("input#date").val()));
+  window.addEventListener("scroll", fadeInOnScroll);
   
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var fadeElements = document.querySelectorAll(".fade-in");
+    
+    fadeElements.forEach(function(element) {
+      element.classList.add("show");
     });
   });
-  
