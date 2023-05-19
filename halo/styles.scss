@@ -1,0 +1,53 @@
+$bg-color: black;
+$font-color: white;
+$link-color: blue;
+
+// Ensure the html and body cover the full page
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#background {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+
+    // Semi-transparent overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 255, 0.5); // Adjust to your preferred blue color
+        z-index: 1; // Adjust if necessary to ensure it's below the menu
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 30%; // Adjust based on Halo 3 menu
+    left: 10%; // Adjust based on Halo 3 menu
+    font-family: 'Halo3Font', sans-serif; // Replace with the exact font
+    font-size: 2em; // Adjust based on Halo 3 menu
+    color: white; // Adjust based on Halo 3 menu
+    z-index: 2; // Ensure it's above the background and overlay
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .menu-item {
+        padding: 0.5em 0; // Adjust based on Halo 3 menu
+
+        &:hover {
+            color: blue; // Adjust based on Halo 3 menu
+            // Add more hover effects to match Halo 3 menu
+        }
+    }
+}

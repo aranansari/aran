@@ -153,3 +153,5 @@ function getAge(dateString) {
       element.classList.add("show");
     });
   });
+
+  

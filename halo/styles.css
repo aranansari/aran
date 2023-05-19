@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#background {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5);
+  z-index: 1;
+}
+
+.menu {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-family: 'Halo3Font', sans-serif;
+  font-size: 2em;
+  color: white;
+  z-index: 2;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu .menu-item {
+  padding: 0.5em 0;
+}
+
+.menu .menu-item:hover {
+  color: blue;
+}
+/*# sourceMappingURL=styles.css.map */
