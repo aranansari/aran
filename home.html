@@ -1,290 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aran Ansari</title>
-    <link rel="icon" href="./images/face icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-    <div id="particles-js"></div>
-    <div id="fullpage">
-        <div class="section">
-            <div class="slide">
-                <div class="content slide-1">
-                    <div class="content-left">
-                        <img src="images/Group 39.png" class="floating-component tl propic" data-depth="0.2">
-                        <p id="subtitle" class="fade-in floating-component bl" data-depth="0.2">
-                            I am a <b><a class="typewrite" data-period="2000" data-type='[ "Product Manager", "Finance Graduate", "Builder", "Coder", "Fallibilist", "Guitarist", "Investor", "Locavore", "Realist" ]'>
-                                <span class="wrap"></span></a></b>
-                                <br>
-                                working on projects that expand access and affect real lives.</p>
-                    </div>
-                    <img src="images/Photo with reflection.png" style="width:360px" class = "floating-component br" data-depth="0.2">
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="icon" href="./images/website_icon.png">
+        <script src="function.js"></script>
+        <title>Aran Ansari</title>
+    </head>
+    <body>
+        <div id="color-background">        
+        <nav id="nav-bar" class="flexbox">
+        <img id="icon" src="./images/website_icon.png">
+        <ul>
+            <li class="nav-items"><a href="./about.html" id="text">About Me</a></li>
+            <li class="nav-items"><a href="Aran Ansari Resume.pdf" target="_blank" id="text">Resume</a></li>
+        </ul>
+        </nav> 
+            <div id="about-section">
+                <div id="about-text" class="fade-in left">
+                    <p id="title" class="name">Aran Ansari</p>
+                    <p id="subtitle" style="font-weight:100px;" class="fade-in">
+                    I am a <b><a class="typewrite" data-period="2000" data-type='[ "Product Manager", "Finance Graduate", "Builder", "Coder", "Fallibilist", "Guitarist", "Investor", "Locavore", "Realist" ]'>
+                        <span class="wrap"></span></a></b>
+                        <br>
+                         working on projects that expand access and affect real lives.</p>
                 </div>
-            </div>
-
-            <div class="slide">
-                
-                <div class="bubbles">
-                    <div class="bubble">
-                      <img src="images/figma.png" alt="Figma" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/notion.png" alt="Notion" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/github-logo.png" alt="GitHub" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/excel.png" alt="Excel" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/slack.png" alt="Slack" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/canva.png" alt="Canva" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/linear.png" alt="Linear" />
-                    </div>
-                    <div class="bubble">
-                        <img src="images/hubspot.png" alt="Hubspot" />
-                    </div>
-                    <div class="bubble">
-                        <img src="images/chatgpt.png" alt="ChatGPT" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/customerio.png" alt="CustomerIO" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/django.png" alt="Django" />
-                      </div>
-                      <div class="bubble">
-                          <img src="images/js.png" alt="Javascript" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/drive.png" alt="Drive" />
-                    </div>
-                  </div>
-                  
-                    <!-- Add more bubbles as needed -->
-                <div class="content slide-2">
-                    <h1  class=" floating-component" style="width:50%"><i>PRODUCT MANAGER</i></h1>
-                    <div style="display: flex; align-items: center; gap:10px; max-height: 100px;">
-                        <img class="gif" src="images/mainvestlogo.gif">
-                        <a style="text-decoration: none;color: inherit; padding:0px;" target="_blank" href="https://www.mainvest.com"><h2>MAINVEST</h2></a>
-                    </div>
-                    <P style="text-transform: uppercase; font-weight: 200;font-style: italic;">Small business Investment Marketplace</P>
-                    <p><b>3+</b> years leading a 5-6 person product team for the seed-stage startup</p>
-                    <h2>During my time there, the Company...</h2>
-                    <ul class="hover-reveal" style="justify-content: center;">
-                        <li><span class="reveal"><b class="first-word">Grew</b> <span class="rest-of-sentence">from <b>$800K AUM</b> to <b>$27M AUM</b></span></span></li>
-                        <li><span class="reveal"><b class="first-word">Helped</b> <span class="rest-of-sentence"><b>>400</b> business owners raise capital</span></span></li>
-                        <li><span class="reveal"><b class="first-word">Processed</b> <span class="rest-of-sentence">over <b>300,000</b> transactions</span></span></li>
-                        <li><span class="reveal"><b class="first-word">Expanded</b> <span class="rest-of-sentence">from <b>2</b> states to <b>47</b></span></span></li>
-                        <li><span class="reveal"><b class="first-word">Added</b> <span class="rest-of-sentence"><b>3</b> new payment methods, debit card, user credit, and investor wallets</span></span></li>
-                    </ul>   
-                    
-                    <div class="gallery">
-                        <img src="images/mainvest-showcase-1.png" alt="Image 1">
-                        <img src="images/mainvest-showcase-2.png" alt="Image 2">
-                        <img src="images/mainvest-showcase-3.png" alt="Image 3">
-                        <img src="images/mainvest-showcase-4.png" alt="Image 4">
-                        <img src="images/mainvest-showcase-5.png" alt="Image 5">
-                    </div>
-            </div>
-            <div class="slide">
-                <div class="bubbles secondb">
-                    <div class="bubble">
-                      <img src="images/figma.png" alt="Figma" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/notion.png" alt="Notion" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/github-logo.png" alt="GitHub" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/js.png" alt="Javascript" />
-                    </div>
-                    <div class="bubble">
-                      <img src="images/slack.png" alt="Slack" />
-                    </div>
-                    <div class="bubble">
-                        <img src="images/spotify.png" alt="Spotify" />
-                      </div>
-                    <div class="bubble">
-                        <img src="images/chatgpt.png" alt="ChatGPT" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/airtable.png" alt="Airtable" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/aws.png" alt="AWS" />
-                      </div>
-                      <div class="bubble">
-                        <img src="images/node.png" alt="Node" />
-                      </div>
-                </div>
-                <div class="content slide-3">
-                    <div>
-                        <h1  class=" floating-component" style="width:100%;"><i><a href="https://www.wfadirectory.com" style="text-decoration: none;color: inherit;" target="_blank">ANYWHERE</a></i></h1>
-                        <P style="text-transform: uppercase; font-weight: 200;font-style: italic;">Directory of best places to work remotely</P>
-                        <p class="subtitle" style="padding-right:300px;">Built and bootstrapped a live website showcasing the best locations to work (outside of your house).</p>
-                        <h2>To develop this project, I taught myself how to...</h2>
-                        <ul class="hover-reveal"  style="justify-content: center;">
-                            <li><span class="reveal"><b class="first-word">Ideate</b><span class="rest-of-sentence"> about a pre-market product, and adopt the best Go-To-Market strategies.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Interview </b> <span class="rest-of-sentence">users pre-MVP and then share with Alpha users to collect feedback</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Integrate </b> <span class="rest-of-sentence">with the Airtable API, pulling data instantly from an open-source database.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Host </b> <span class="rest-of-sentence">a website on Netlify.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Develop </b> <span class="rest-of-sentence">using the Google Maps & Places API to build an interactive map page.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Code </b> <span class="rest-of-sentence">interactive Javascript and CSS front-end elements.</span></span></li>
-                        </ul>
-                        <div class="gallery">
-                            <img src="images/anywhere-title-showcase.png" alt="Image 1">
-                            <img src="images/anywhereMapShowcase.png" alt="Image 2">
-                            <img src="images/anywhere-card-showcase.png" alt="Image 3">
-                        </div>
-                    </div>
-
-                    <div class="separator"></div>
-
-                    <div class="right">
-                        <h1 class=" floating-component" style="width:100%"><i><a href="https://slack.com/apps/A043YHM6LEM-mixtape?tab=more_info" style="text-decoration: none;color: inherit;" target="_blank">MIXTAPE</a></i></h1>
-                        <P style="text-transform: uppercase; font-weight: 200;font-style: italic;">Slack App allowing teams to collaborate on Spotify Playlists</P>
-                        <p class ="subtitle" style="padding-left:300px;">Built and bootstrapped a serverless Slack App that sends weekly prompts to Slack teams and creates playlists based on their responses.</p>
-                        <h2>To develop this project, I taught myself how to...</h2>
-                        <ul class="hover-reveal" style="justify-content: center;">
-                            <li><span class="reveal"><b class="first-word">Commit</b> <span class="rest-of-sentence">to hard self-made deadlines and push myself to find solutions</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Employ</b> <span class="rest-of-sentence">ChatGPT in a number of ways, including creating the Playlist themes, and helping me debug my code.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Integrate</b> <span class="rest-of-sentence">with the Slack API, sending and receiving messages.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Configure</b> <span class="rest-of-sentence">AWS Lambda, Cloudwatch, and API Gateway to build an App.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Connect</b> <span class="rest-of-sentence">to the Spotify API to create playlists and add tracks.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Code</b> <span class="rest-of-sentence">complicated Javascript back-end structures.</span></span></li>
-                        </ul>
-                        <div class="gallery">
-                            <img src="images/Frame 1.png" alt="Image 1">
-                            <img src="images/Frame 4.png" alt="Image 2">
-                            <img src="images/Frame 3.png" alt="Image 3">
-                        </div>
-                    </div>
-
-                    <div class="separator"></div>
-
-                    <div class="center">
-                        <p>I am always tinkering and working on new projects. If you want to hear about some others I have cooking, reach out!</p>
-                        <h2>The industries I'm especially interested in are.</h2>
-                        <ul class="hover-reveal"  style="justify-content: center;">
-                            <li><span class="reveal"><b class="first-word">Finance</b> <span class="rest-of-sentence"> - Increasing financial access to Americans.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Real Estate</b> <span class="rest-of-sentence"> - Finding new and more attainable ways to homeownership.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">Music</b> <span class="rest-of-sentence"> - My first love, helping musicians get heard, or helping audiofiles discover new music.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">SMBs</b> <span class="rest-of-sentence"> - Helping Small Business Owners survive and thrive.</span></span></li>
-                            <li><span class="reveal"><b class="first-word">AI/No-code</b> <span class="rest-of-sentence"> - Letting non-technical people like me achieve amazing things.</span></span></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="slide">
-                <div class="content slide-4">
-                    <h3>The Story</h3>
-                    
-                        <p style="font-size:20px;">Hi! I'm Aran Ansari and I'm currently <b id="age"></b> and living a <b>Digital Nomad</b> lifestyle (currently in Somerville, MA). I was born and raised in Belmont, MA with two older sisters and amazing parents.
-                        <br>
-                        <br>
-                        My father is an Iranian-born psychiatrist, and is the most logical thinker I've ever known. My mother is a Venezuelan-born translator/paralegal/painter, who happens to be the most creative person I've ever known! Being brought up in this unique and eclectic household meant I developed a balance of rationale and intuition. A perfect split down the middle of left-brain and right-brain.
-                        <br>
-                        <br>
-                        I love being outside, listening to music, cooking, being active (frisbee, basketball, soccer, golf) and spending time with my lifelong friends and girlfriend. I'm currently planning to build a tiny home in the woods of Vermont! &#127794;
-                        <br>
-
-                        <h3>My Career</h3> 
-                        <p style="font-size:20px;">For college I attended <b>University of Massachusetts, Amherst for the Isenberg School of Business</b>. There I majored in Finance, learning the ins-and-outs of Excel spreadsheets and Income Statements. I was also able to pursue a minor in Economics - where I was radicalized into Marxism and Capitalism equally - and Information Technology - where I began my habit of being the worst coder in a room full of great engineers. I knew I didn't want to pursue the conventional path my business school was nudging me towards, Big 4 Accounting school and gruntwork in cubicles, which meant many of the roles I found were outside of school. 
-                        <br>
-                        <br>
-                        My first notable internship was an unpaid one at a NYC startup called Gigzolo (acq. Glia), which was a marketplace for live event entertainment booking. Hosts could come on Gigzolo and book a wedding band, hoola hooper, or breakdancing troupe, and my role at the company was to onboard these bands - the supply side of the marketplace.
-                        <br>
-                        <br>
-                        Next, I went on to work with my sister at YearUp where I was simply tasked with researching and collecting data on relevant foundations that the grantwriting team could reach out to and pitch. I got a taste of what working for a large (albeit philanthropic) organization in the city was like - wore a tie and uncomfortable shoes everyday and spent ~$20 for lunch daily (twice as much as I'd make in an hour!).
-                        <br>
-                        <br>
-                        Post graduation in 2019, I was set on startups and working in a high-growth/high-impact position. For a while, the job search was tough. It seemed like early-stage companies didn't want to take a risk on an inexperienced grad. In parallel, I was toying with the idea of launching my own product (which, now knowing how hard a product launch is, is very laughable in retrospect) and trying my hand at entrepreneurship. The idea was simple - a way for local people to chip in and support a business they care about. Like a GoFundMe but exclusively for SMBs. Early into my market research for a product like this, I discovered a firm called <a href="./mainvest.html"><b>Mainvest</b></a> that was doing something very similar, and infact extended the idea from being a <i>donation</i> to an actual <i>investment.</i> As a finance major, this really excited me and I dug in. Imagine my surprise when 2/3 of the cofounders had studied at UMass Amherst, and one was a Finance Major. I immediately reached out and the rest is history.
-                        <br>
-                        <br>
-                        Now, 3 years later, and I've helped build the company from sub-500 person userbase to the tens of thousands of users it has today. Touching every facet of the business I have been lucky enough to see how the sausage is made in the Ops/Sales processes, finance and accounting, marketing, and especially the product development cycle. As a Product Manager, my team and I experimented with virtually every User Experience on the site, and made data-informed decisions and strategies. 
-                        <br>
-                        <br>
-                        If you've made it this far, thank you! Please reach out and say hello &#x1F499;. 
-                        <script src="function.js">
-                            document.getAge("05-04-1997").innerHTML;
-                        </script>
-                        </p>
-                        <div class="separator"></div>
-                <div id="footer">
-                    <div id="footer-text">
-                    <p  style="font-size:15px;">
-                        This website was built and coded by me, Aran Ansari using a combination of HTML, CSS, and Javascript.
-                        <br>
-                        <br>
-                        If you are interested in contacting me, please reach out via email at <a target="_blank" style="text-decoration: none;" href="mail-to:amgansari@gmail.com">amgansari@gmail.com</a> or phone at (781)-888-4057. Thanks!
-                    </p>
-            </div>
-            </div>
-
-            <div class="slide">
-                <div class="resume-page">
-                <div class="social-pills">
-                    <a href="https://www.linkedin.com/in/aranansari" target="_blank" class="pill linkedin floating-component">
-                        <i class="fab fa-linkedin "></i>
-                        LinkedIn
-                    </a>
-                    <a href="https://www.github.com/aranansari" target="_blank" class="pill github floating-component">
-                        <i class="fab fa-github"></i>
-                        GitHub
-                    </a>
-                    <a href="https://open.spotify.com/user/12587690?si=295e6d551e424805" target="_blank" class="pill spotify floating-component">
-                        <i class="fab fa-spotify"></i>
-                        Spotify
-                    </a>
-                    <a href="mailto:amgansari@gmail.com" target="_blank" class="pill gmail floating-component">
-                        <i class="far fa-envelope"></i>
-                        Gmail
-                    </a>
-                    <a href="Aran Ansari Resume.pdf" target="_blank" class="pill document floating-component">
-                        <i class="far fa-file-pdf"></i>
-                        Resume
-                    </a>
-                </div>
-                <div class="resume-embed">
-                    <embed src="Aran Ansari Resume.pdf" type="application/pdf" width="100%" height="100%">
-                </div>
-            </div>
+                <img class="propic fade-in right" src="./images/boston skyline pic 2.png">
             </div>
         </div>
-    </div>
-    <nav class="fixed-nav-bar">
-        <a href="#home" id="home-link">Home</a>
-        <a href="#home/1">Work</a>
-        <a href="#home/2">Projects</a>
-        <a href="#home/3">About</a>
-        <a href="#home/4">Resume +</a>
-    </nav>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="function.js">
-        document.getAge("05-04-1997").innerHTML;
-    </script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>-->
-    <script src="main.js"></script>
-</body>
+        <div id="second-container">
+        <div id="about-me">
+            <p id="about-me-title" class="fade-in-scroll right">About Me</p>
+            <div id ="text" class="fade-in-scroll left">
+                <p>I'm looking to help build products that make things <i>easier, faster, and more accessible</i> -<b> in the real world. </b></p>
+                <p>Things you can <i><b>feel, taste, hear, and smell.</b></i></p>
+                <p>Currently living in the great city of Cambridge, Massachusetts and building <a href="https://wfadirectory.com"><b>anywhere</b></a> and <a href="https://aranansari.com/mixtape.html"><b>Mixtape</b></a>, among a few other projects in stealth.</p>
+            </div>
+        </div>
+        </div>
+        <div id="project-section">
+        <h1 id="subtitle" class="fade-in-scroll right">Portfolio</h1>
+            <p id="text" class="fade-in-scroll left">These are just a few of the things I've achieved, but for a more <i>professional</i> look, see my <a target="_blank" href="Aran Ansari Resume.pdf"><b>resume</b></a>.</p>
+            <div id="projects">
+                <div id="main-project" class="fade-in-scroll right">
+                    <div id="card-image">
+                        <img src="./images/Homepage preview.png" id="main-image" >
+                    </div>
+                    <div id="card-content">
+                        <h1 id="company">Mainvest</h1>
+                        <h2 id="position">Product Manager, 2019 - 2023</h2>
+                        <p id="description">Letting you invest in your favorite local businesses. Helping entrepreneurs access easier, kinder capital.</p>
+                        <form action="./mainvest.html" method="get" id="learnmore">
+                            <button id="learnmore" class="button1" type="submit">Learn More</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="non-main-projects">
+                    <div id="second-project"  class="fade-in-scroll left">
+                        <img src="./images/WFAMAP.png" id="main-image" style="border-radius: 0.8em;">
+                        <h1 id="company">anywhere.</h1>
+                        <h2 id="position">Indie Project, 2022-2023</h2>
+                        <p id="description">A directory of the best local businesses/parks to work remotely. Working from home should feel fun!</p>
+                        <form action="./wfa.html" method="get">
+                            <button id="learnmore" class="button1" type="submit">Learn More</button>
+                        </form>
+                        </div>
+                    <div id="third-project" class="fade-in-scroll right">
+                        <img src="./images/Mixtape-panel.png" id="main-image" style="width:400px; border-radius: 0.8em;">
+                        <h1 id="company">MixTape</h1>
+                        <h2 id="position">Indie Project, 2022-2023</h2>
+                        <p id="description">Bringing distributed teams together through music. Collaborate on a new playlist every week.</p>
+                        <form action="./mixtape.html" method="get">
+                            <button id="learnmore" class="button1" type="submit">Learn More</button></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-text" class="fade-in-scroll">
+            <p>
+                This website was built and coded by me, Aran Ansari using a combination of HTML, CSS, and Javascript.
+                <br>
+                <br>
+                If you are interested in contacting me, please reach out via email at <a target="_blank" style="text-decoration: none;" href="mail-to:amgansari@gmail.com">amgansari@gmail.com</a> or phone at (781)-888-4057. Thanks!
+            </p>
+        </div>
+        </div>
+    </body>
 </html>
