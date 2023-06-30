@@ -68,21 +68,6 @@ TxtType.prototype.tick = function() {
   console.log(getAge('05/04/1997'));
 
   
-  function fadeInOnScroll() {
-    var fadeElements = document.querySelectorAll(".fade-in-scroll");
-    
-    fadeElements.forEach(function(element) {
-      var elementPosition = element.getBoundingClientRect().top;
-      var windowHeight = window.innerHeight * 0.75;
-      
-      if (elementPosition < windowHeight) {
-        element.classList.add("show");
-      }
-    });
-  }
-  
-  window.addEventListener("scroll", fadeInOnScroll);
-  
 
 
   document.addEventListener("DOMContentLoaded", function() {
@@ -185,19 +170,60 @@ particlesJS.load('particles-js', 'particles.json', function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var currentLocation = window.location.href;
-    var homeLink = document.getElementById("home-link");
-    var links = document.querySelectorAll(".fixed-nav-bar a");
-    
-    links.forEach(function(link) {
-        if (link.href === currentLocation) {
-            link.classList.add("active");
-        }
-    });
-    
-    // If no link is found, default to the "HOME" link
-    if (!document.querySelector(".fixed-nav-bar .active")) {
-        homeLink.classList.add("active");
+
+  var currentLocation = window.location.href;
+  var homeLink = document.getElementById("home-link");
+  var links = document.querySelectorAll(".fixed-nav-bar a");
+
+  links.forEach(function(link) {
+    if (link.href === currentLocation) {
+      link.classList.add("active");
     }
+  });
+
+  // If no link is found, default to the "HOME" link
+  if (!document.querySelector(".fixed-nav-bar .active")) {
+    homeLink.classList.add("active");
+  }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  const bubbles = document.querySelectorAll('.bubble');
+
+  bubbles.forEach(bubble => {
+    let randomX = Math.random() * (window.innerWidth - bubble.offsetWidth);
+    let randomY = Math.random() * (window.innerHeight - bubble.offsetHeight);
+    let randomVX = (Math.random() - 0.5) * 2; // Random value between -1 and 1
+    let randomVY = (Math.random() - 0.5) * 2; // Random value between -1 and 1
+
+    bubble.style.left = `${randomX}px`;
+    bubble.style.top = `${randomY}px`;
+
+    // Animation loop
+    function animate() {
+      randomX += randomVX;
+      randomY += randomVY;
+
+      // Check for collision with right or left boundary and reverse direction
+      if (randomX <= 0 || randomX >= window.innerWidth - bubble.offsetWidth) {
+        randomVX *= -1;
+        // Add a small randomness to the velocity
+        randomVX += (Math.random() - 0.5);
+      }
+
+      // Check for collision with bottom or top boundary and reverse direction
+      if (randomY <= 0 || randomY >= window.innerHeight - bubble.offsetHeight) {
+        randomVY *= -1;
+        // Add a small randomness to the velocity
+        randomVY += (Math.random() - 1);
+      }
+
+      bubble.style.left = `${randomX}px`;
+      bubble.style.top = `${randomY}px`;
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  });
+});
