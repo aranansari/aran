@@ -23,8 +23,6 @@ body, html{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    overflow-x: hidden; /* hide horizontal scroll */
-    overflow-y: auto;   /* enable vertical scroll */
 }
 
 .propic{
@@ -414,6 +412,9 @@ p {
 
 @media screen and (max-width: 768px) {
     /* Adjust styles for screens up to 768px wide */
+    
+    
+    
     .content {
         flex-direction: column;
     }

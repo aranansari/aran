@@ -84,6 +84,7 @@ TxtType.prototype.tick = function() {
     scrollOverflow:true,
     verticalCentered: true,
     scrollingSpeed: 600,
+    autoScrolling: false, 
     scrollHorizontally: true,
     dragAndMove: true,
     slidesNavigation: true,
