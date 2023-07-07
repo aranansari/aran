@@ -522,7 +522,7 @@ p {
             flex-direction: column;
   }
   .propic {
-    width: 280px;
+    width: 200px !important;
   }
   .content-left {
     -webkit-box-align: center;
@@ -542,17 +542,18 @@ p {
     font-size: 60px;
   }
   h2 {
-    font-size: 40px;
+    font-size: 35px;
   }
   h3 {
     font-size: 35px;
   }
   p {
-    font-size: 25px;
+    font-size: 20px;
   }
   p.subtitle {
     width: 100%;
     padding: 0px !important;
+    font-size: 20px;
   }
   .fixed-nav-bar {
     padding-left: 20px;

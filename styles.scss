@@ -421,8 +421,10 @@ p {
 
 
     .propic{
-        width:280px;
+        width:200px !important;
     }
+
+
 
     .content-left {
         align-items: center;
@@ -444,7 +446,7 @@ p {
     }
 
     h2 {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     h3 {
@@ -452,12 +454,14 @@ p {
     }
 
     p {
-        font-size: 25px;
+        font-size: 20px;
     }
+
 
     p.subtitle {
         width:100%;
         padding:0px !important;
+        font-size:20px;
     }
 
     .fixed-nav-bar {
