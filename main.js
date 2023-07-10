@@ -228,3 +228,5 @@ document.addEventListener('DOMContentLoaded', function() {
     animate();
   });
 });
+
+document.getElementById("age").innerHTML = getAge("05-04-1997");
