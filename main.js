@@ -110,6 +110,10 @@ TxtType.prototype.tick = function() {
 });
 
 
+document.getElementById('toggle').addEventListener('change', function() {
+  document.body.classList.toggle('dark-mode', this.checked);
+});
+
 
 /* 
 const decoration = document.querySelector('.decoration');

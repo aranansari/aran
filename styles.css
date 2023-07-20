@@ -10,8 +10,82 @@ body {
   background: transparent;
 }
 
+body.dark-mode {
+  color: white;
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .content-left .propic {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body.dark-mode nav a {
+  color: white;
+}
+
+body.dark-mode .hover-reveal .reveal {
+  border: 1px solid #EFEEE7;
+}
+
+body.dark-mode .fixed-nav-bar a::after {
+  background-color: #EFEEE7;
+}
+
+.switch {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.toggle-btn:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #1a1a1a;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.toggle:checked + .toggle-btn {
+  background-color: white;
+}
+
+.toggle:checked + .toggle-btn:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+
 body, html {
   background-color: #EFEEE7;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
   color: #26262B;
   font-family: "Work Sans", sans-serif;
   margin: 0;
@@ -69,6 +143,13 @@ p {
   -ms-flex-item-align: start;
       align-self: start;
   gap: 50px;
+}
+
+.content-left img {
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
 }
 
 .content img {
@@ -169,8 +250,8 @@ p {
   border-radius: 30px;
   padding: 10px;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .hover-reveal .reveal .first-word {
@@ -190,6 +271,8 @@ p {
   color: #EFEEE7;
   padding: 10px 20px;
   border-radius: 50px;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
 }
 
 @-webkit-keyframes float {
