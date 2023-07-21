@@ -35,6 +35,12 @@ body.dark-mode {
       background-color: #EFEEE7;
   }
 
+  body.dark-mode .pill {
+
+    background-color: #FFF;
+    color: #26262B;
+  }
+
   .switch {
     position: absolute;
     top: 10px;
@@ -105,7 +111,7 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 
@@ -410,6 +416,7 @@ p {
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    transition: all 0.5s ease;
 }
 
 .pill i {
@@ -521,7 +528,7 @@ p {
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 20px;
     }
 
     h3 {
@@ -550,8 +557,10 @@ p {
     }
 
     .resume-embed {
-        padding-right: 0;
-        max-width: 100%;
+        display: none;
+    }
+    .resume-page{
+        flex-direction: column;
     }
 
     .gallery {
