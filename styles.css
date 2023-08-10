@@ -390,9 +390,7 @@ p {
 
 .gallery {
   width: 60%;
-  /* Adjust the width to fit your design */
   margin: 0 auto;
-  /* Center the gallery horizontally */
   border-radius: 50%;
 }
 
