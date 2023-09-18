@@ -505,55 +505,72 @@ p {
   }
 
 
-/* Project Tab Styles */
+  /* Project Tab Styles */
 #project-tabs {
     display: flex;
+    flex-wrap: wrap; /* Allow tabs to wrap to the next line on smaller screens */
+    justify-content: center; /* Center-align the tabs */
+    gap: 10px; /* Add spacing between tabs */
     background-color: transparent;
-    
 }
 
 .project-tab {
-    font-weight:600;
-    margin: 0 10px;
-    padding: 10px 20px;
+    font-weight: 600;
+    margin: 5px; /* Adjust margins for smaller screens */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
     cursor: pointer;
     transition: background-color 0.3s;
-    font-size: 30px;
+    font-size: 18px; /* Reduce font size for smaller screens */
     border: 1px solid #26262B;
-    color:#26262B;
+    color: #26262B;
     border-radius: 30px;
-    transition: color 0.5s ease;
-    transition: background-color 0.5s ease;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    text-align: center; /* Center-align tab text */
+    flex: 1; /* Make tabs evenly distribute across the container */
 }
 
-body.dark-mode .project-tab{
+/* Add media query for small screens (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+    .project-tab {
+        font-size: 16px;
+    }
+}
+
+body.dark-mode .project-tab {
     color: #FFF;
     border: 1px solid #FFF;
 }
 
 .project-tab:hover {
     background-color: #333;
-    color:#FFF;
+    color: #FFF;
 }
 
-body.dark-mode .project-tab:hover{
+body.dark-mode .project-tab:hover {
     border: 1px solid #26262B;
     background-color: #FFF;
-    color:#26262B;
+    color: #26262B;
 }
-
 
 /* Project Content Styles */
 #project-content {
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center-align content on smaller screens */
 }
 
 .project-info {
     display: none;
     padding: 20px;
+    max-width: 100%; /* Ensure content doesn't overflow on small screens */
 }
 
+/* Add media query for small screens (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+    .project-info {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+}
   
 
 @media screen and (max-width: 768px) {
