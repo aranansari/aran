@@ -180,7 +180,7 @@ p {
     text-align: left;
     overflow-y: auto;
     margin-bottom:150px;
-    padding-top:100px;
+    padding-top:50px;
 }
 
 .right{
@@ -330,8 +330,21 @@ p {
  
  .gallery {
     width: 60%;
-    margin: 0 auto;
+    margin:0 auto;
     border-radius: 50%;
+}
+
+.project-img{
+    max-width:60%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 50px;
+}
+
+.project-img img{ 
+    width:100%;
 }
 
 .slick-prev:before {
@@ -491,6 +504,57 @@ p {
     }
   }
 
+
+/* Project Tab Styles */
+#project-tabs {
+    display: flex;
+    background-color: transparent;
+    
+}
+
+.project-tab {
+    font-weight:600;
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 30px;
+    border: 1px solid #26262B;
+    color:#26262B;
+    border-radius: 30px;
+    transition: color 0.5s ease;
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode .project-tab{
+    color: #FFF;
+    border: 1px solid #FFF;
+}
+
+.project-tab:hover {
+    background-color: #333;
+    color:#FFF;
+}
+
+body.dark-mode .project-tab:hover{
+    border: 1px solid #26262B;
+    background-color: #FFF;
+    color:#26262B;
+}
+
+
+/* Project Content Styles */
+#project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info {
+    display: none;
+    padding: 20px;
+}
+
+  
 
 @media screen and (max-width: 768px) {
     /* Adjust styles for screens up to 768px wide */

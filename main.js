@@ -110,11 +110,6 @@ TxtType.prototype.tick = function() {
 });
 
 
-document.getElementById('toggle').addEventListener('change', function() {
-  document.body.classList.toggle('dark-mode', this.checked);
-});
-
-
 /* 
 const decoration = document.querySelector('.decoration');
 
@@ -162,17 +157,21 @@ window.addEventListener('load', function() {
 particlesJS.load('particles-js', 'particles.json', function() {
     console.log('callback - particles.js config loaded');
  });
- 
 
+ 
  $(document).ready(function(){
-    $('.gallery').slick({
-        dots: true, // Add navigation dots
-        infinite: false, // Enable infinite scrolling
-        speed: 300, // Set animation speed (in milliseconds)
-        slidesToShow: 1, // Show one slide at a time
-        slidesToScroll: 1 // Scroll one slide at a time
-    });
+  $('.gallery').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1
+  }).on('init', function(event, slick){
+      // Show all galleries explicitly when the carousel is initialized
+      $('.gallery').css('display', 'block');
+  });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -234,3 +233,66 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById("age").innerHTML = getAge("05-04-1997");
+
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectInfo = document.querySelectorAll(".project-info");
+const body = document.body;
+const toggleSwitch = document.getElementById('toggle');
+
+// Define the colorMap for light mode colors and their corresponding dark mode colors
+const colorMap = {
+  "EFEEE7": {
+    light: "#EFEEE7",
+    dark: "#1a1a1a",
+  },
+  "#CFE4EA": {
+    light: "#CFE4EA",
+    dark: "#52777D",
+  },
+  "#DBDBF2": {
+    light: "#DBDBF2",
+    dark: "#595959",
+  },
+  "#E4F2FF": {
+    light: "#E4F2FF",
+    dark: "#42515D",
+  },
+  "#DEF0DE": {
+    light: "#DEF0DE",
+    dark: "#385E32",
+  },
+  "#eee": {
+    light: "#eee",
+    dark: "#1a1a1a",
+  },
+  // Add more color mappings as needed
+};
+
+projectTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const projectToShow = tab.getAttribute("data-project");
+        const bgColorData = tab.getAttribute("data-bg-color");
+        const bgColor = colorMap[bgColorData];
+
+        projectInfo.forEach((info) => {
+            info.style.display = "none";
+        });
+
+        document.getElementById(projectToShow).style.display = "block";
+
+        // Change the background color of the body based on dark mode state
+        body.style.backgroundColor = toggleSwitch.checked ? bgColor.dark : bgColor.light;
+    });
+});
+
+// Show the first project and set the initial background color
+document.getElementById("project-2").style.display = "block";
+
+// Handle initial background color based on dark mode state
+body.style.backgroundColor = toggleSwitch.checked ? "#1a1a1a" : "transparent";
+
+toggleSwitch.addEventListener('change', function () {
+  // Update the background color when dark mode is toggled
+  document.body.classList.toggle('dark-mode', this.checked);
+  body.style.backgroundColor = this.checked ? "#1a1a1a" : "transparent";
+});

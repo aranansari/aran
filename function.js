@@ -26,5 +26,3 @@
 
   console.log(getAge('05/04/1997'));
 
-
-  
