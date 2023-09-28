@@ -110,6 +110,10 @@ h1 {
   font-weight: bold;
 }
 
+h1:hover{
+    text-decoration: underline;
+}
+
 h2 {
   font-size: 30px;
   font-weight: bold;
@@ -251,19 +255,6 @@ p {
 }
 
 
-@keyframes float {
-    0%, 100% { transform: scale(1) translate(0px, 0px); }
-    50% { transform: scale(1.05) translate(0px, 5px); }
-  }
-  .floating-component {
-    transform: scale(1) translate(0px, 0px);
-    transition: transform 0.2s;
-  }
-  
-  .floating-component:hover {
-    transform: scale(1.05) translate(0px, 5px);
-    transition: transform 5s ease-in-out;
-  }
 
 #fullpage {
     position: relative;
