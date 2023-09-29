@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Fraunces', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 10vw 0px 10vw ;
+  
+    .company-name {
+      font-size: 2em;
+      font-weight:800;
+    }
+  
+    .nav-buttons button {
+      background-color: transparent;
+      border: none;
+      margin: 0 10px;
+      font-size:1.5em;
+  
+      &.log-in {
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding:10px;
+      }
+    }
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid black;
+    width:80vw;
+    margin:10px auto;
+  }
+  
+  .intro {
+    text-align: center;
+    
+    padding: 0 7vw 40px 7vw;
+  
+    h1{
+        font-size: 5em;
+        font-weight: 500;
+        padding-left:10%;
+        padding-right:10%;
+    }
+    
+    button{
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+        padding:10px 50px;
+        font-size:2em;
+    }
+
+  .bold {
+    position: relative; // Relative positioning for the after pseudo-element
+    font-weight:800 !important;
+
+    &:after {
+      content: ''; // Empty content for the after pseudo-element
+      display: block;
+      position: absolute;
+      bottom: -0px; // Position it slightly below the text
+      left: 0;
+      width: 100%; // Make it the full width of the text
+      height: 20px; // Height of the brush stroke image
+      background: url('./images/brush-stroke.png') no-repeat center center;
+      background-size: cover; // Cover the entire area of the pseudo-element
+      z-index: -5;
+    }
+  }
+  
+    .bulleted-list-image {
+      display: flex;
+      justify-content: space-around;
+      
+      img{
+          width:30%;
+      }
+      
+      ul {
+        list-style-type: none; // Remove the default bullets
+        padding: 0;
+        margin: 0;
+      
+        li {
+          margin-bottom: 1em; // Add some space between list items
+          text-align: left !important;
+          font-size:2em;
+          padding-left: 30px; // Provide space for the image bullet
+          background-image: url('./images/radio_button_checked.png'); // Path to your bullet image
+          background-position: left center; // Position the bullet image
+          background-repeat: no-repeat; // Do not repeat the bullet image
+          background-size: 20px; // Size of the bullet image
+          text-indent: 5px; // Indent text to avoid overlap with the bullet image
+        }
+      }
+      
+    }
+  }
+  
+  .banner {
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 2px 0;
+    font-weight: 800;
+  }
+  
+  .how-it-works {
+    text-align: center;
+    padding: 20px 5vw;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+
+    h1{
+        font-size: 3em;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    p{
+        font-size:2em;
+        font-weight: 800;  
+        padding: 0 60px;
+    }
+
+    img{
+        width:60%;
+    }
+  }
+  
+  footer {
+    background-color: black;
+    color: white;
+    padding: 20px 10vw;
+    text-align: center;
+  
+    .company-name {
+        font-size: 2em;
+        font-weight:800;
+      }
+
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+    hr{
+        border-color: white;
+    }
+
+    .legal {
+      font-size: 0.8em;
+  
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+      }
+    }
+
+    .menu{
+        display: flex;
+        font-weight:800;
+        gap:50px;
+    }
+  }
+  
+  
