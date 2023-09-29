@@ -9,6 +9,28 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  border-color: #D9D9D9;
+  padding: 5px 50px;
+  border-radius: 100px;
+  -webkit-box-shadow: 10px 5px 5px #D9D9D9;
+          box-shadow: 10px 5px 5px #D9D9D9;
+  color: #D9D9D9 !important;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,14 +49,14 @@ nav .company-name {
   font-weight: 800;
 }
 
-nav .nav-buttons button {
+nav .nav-buttons a {
   background-color: transparent;
   border: none;
   margin: 0 10px;
   font-size: 1.5em;
 }
 
-nav .nav-buttons button.log-in {
+nav .nav-buttons a.log-in {
   background-color: black;
   color: white;
   border-radius: 20px;
@@ -48,9 +70,13 @@ hr {
   margin: 10px auto;
 }
 
+.book {
+  padding: 0 30vw 40px 30vw !important;
+}
+
 .intro {
   text-align: center;
-  padding: 0 7vw 40px 7vw;
+  padding: 0 20vw 40px 20vw;
 }
 
 .intro h1 {
@@ -60,12 +86,74 @@ hr {
   padding-right: 10%;
 }
 
+.intro p {
+  font-size: 2em;
+}
+
+.intro .bg-image {
+  position: absolute;
+  width: 300px;
+  z-index: -5;
+}
+
+.intro .tl {
+  left: 10px;
+  top: 100px;
+}
+
+.intro .bl {
+  left: 80px;
+  top: 300px;
+}
+
+.intro .tr {
+  right: 10px;
+  top: 100px;
+}
+
+.intro .br {
+  right: 80px;
+  top: 300px;
+}
+
+.intro .filter {
+  max-width: 75%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.intro hr {
+  width: 75%;
+  border-width: 3px;
+}
+
 .intro button {
   background-color: black;
   color: white;
   border-radius: 20px;
   padding: 10px 50px;
   font-size: 2em;
+}
+
+.intro .search-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  font-size: 1.5em;
 }
 
 .intro .bold {
@@ -77,11 +165,29 @@ hr {
   content: '';
   display: block;
   position: absolute;
-  bottom: -0px;
+  bottom: 0px;
   left: 0;
   width: 100%;
   height: 20px;
   background: url("./images/brush-stroke.png") no-repeat center center;
+  background-size: cover;
+  z-index: -5;
+}
+
+.intro .bold2 {
+  position: relative;
+  font-weight: 800 !important;
+}
+
+.intro .bold2:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: url("./images/brush-stroke-small.png") no-repeat center center;
   background-size: cover;
   z-index: -5;
 }
@@ -133,6 +239,9 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 40px;
 }
 
