@@ -345,6 +345,14 @@ $large-desktop: 1440px;
           width: 100%;
           margin-top: 20px;
         }
+        ul{
+          li {
+          margin-bottom: .5em; // Add some space between list items
+          text-align: left !important;
+          font-size:1.5em;
+          background-size: 15px; // Size of the bullet image
+          }
+        }
       }
       .bold {
         position: relative; 

@@ -372,6 +372,12 @@ footer .menu {
     width: 100%;
     margin-top: 20px;
   }
+  .intro .bulleted-list-image ul li {
+    margin-bottom: .5em;
+    text-align: left !important;
+    font-size: 1.5em;
+    background-size: 15px;
+  }
   .intro .bold {
     position: relative;
     display: inline-block;
