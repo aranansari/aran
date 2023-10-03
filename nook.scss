@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
 
+// Breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large-desktop: 1440px;
+
+
 * {
     box-sizing: border-box;
     font-family: 'Fraunces', sans-serif;
@@ -78,6 +85,7 @@
         font-weight: 500;
         padding-left:10%;
         padding-right:10%;
+        overflow: visible;
     }
     p{
         font-size:2em;
@@ -139,42 +147,47 @@
         font-size: 1.5em;
     }
 
-  .bold {
-    position: relative; // Relative positioning for the after pseudo-element
-    font-weight:800 !important;
-
-    &:after {
-      content: ''; // Empty content for the after pseudo-element
-      display: block;
-      position: absolute;
-      bottom:0px;
-      left: 0;
-      width: 100%; // Make it the full width of the text
-      height: 20px; // Height of the brush stroke image
-      background: url('./images/brush-stroke.png') no-repeat center center;
-      background-size: cover; // Cover the entire area of the pseudo-element
-      z-index: -5;
-    }
-  }
+    .bold {
+        position: relative; 
+        display: inline-block; // Makes it possible to use top and bottom padding
+        overflow: visible;
+        font-weight: 800;
+        
+        &:after {
+          content: ''; 
+          display: block;
+          position: absolute;
+          bottom: 5px; // Moves the underline down below the text
+          left: -10px; // Extends the underline to the left
+          width: calc(100% + 30px); // Makes the underline wider than the text
+          height: 30px; // Adjust the height of the underline
+          background: url('./images/brush-stroke.png') no-repeat center center;
+          background-size: cover; 
+          z-index: -5;
+        }
+      }
+    
   
-  .bold2{
-      
-    position: relative; // Relative positioning for the after pseudo-element
-    font-weight:800 !important;
-
+  
+  .bold2 {
+    position: relative; 
+    display: inline-block; // Makes it possible to use top and bottom padding
+    font-weight: 800;
+    
     &:after {
-      content: ''; // Empty content for the after pseudo-element
-      display: block;
-      position: absolute;
-      bottom:0px;
-      left: 0;
-      width: 100%; // Make it the full width of the text
-      height: 20px; // Height of the brush stroke image
-      background: url('./images/brush-stroke-small.png') no-repeat center center;
-      background-size: cover; // Cover the entire area of the pseudo-element
-      z-index: -5;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 5px; // Adjusts the vertical position of the underline
+        left: -10px; // Adjusts the left position of the underline
+        right: -10px; // Adjusts the right position of the underline
+        height: 20px;
+        background: url('./images/brush-stroke-small.png') no-repeat center center;
+        background-size: cover; 
+        z-index: -5;
     }
   }
+
 
     .bulleted-list-image {
       display: flex;
@@ -214,7 +227,7 @@
   
   .how-it-works {
     text-align: center;
-    padding: 20px 5vw;
+    padding: 20px 7vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,16 +241,30 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+
+        .how-text{
+            flex-direction: column;
+        }
+
+    }
+
+    .how-two{
+        flex-wrap: wrap-reverse;
     }
 
     p{
         font-size:2em;
         font-weight: 800;  
-        padding: 0 60px;
+        padding: 0 100px;
+    }
+
+    #sub-p{
+        font-weight:300 !important;
+        font-size:1em;
     }
 
     img{
-        width:60%;
+        width:50%;
     }
   }
   
@@ -281,3 +308,136 @@
   }
   
   
+
+@media (max-width: $mobile) {
+    nav {
+      padding: 10px 5vw;
+  
+      .company-name {
+        font-size: 1.5em;
+      }
+  
+      .nav-buttons a {
+        font-size: 1.2em;
+  
+        &.log-in {
+          padding: 8px;
+        }
+      }
+    }
+  
+    hr {
+      width: 90vw;
+    }
+  
+    .intro {
+      padding: 0 5vw 20px 5vw;
+  
+      h1 {
+        font-size: 3em;
+        padding-left: 5%;
+        padding-right: 5%;
+      }
+      .bulleted-list-image {
+        flex-direction: column;
+  
+        img {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+      .bold {
+        position: relative; 
+        display: inline-block; // Makes it possible to use top and bottom padding
+        font-weight: 800;
+        
+        &:after {
+            display: none;
+        }
+      }
+      .bold2 {
+        position: relative; 
+        display: inline-block; // Makes it possible to use top and bottom padding
+        font-weight: 800;
+        
+        &:after {
+            display: none;
+        }
+      }
+    }
+  
+    .how-it-works {
+      padding: 20px 3vw;
+  
+      div {
+        flex-wrap: wrap;
+        align-items: center;
+  
+        p {
+          font-size: 1.5em;
+          padding: 0 20px;
+        }
+  
+        img {
+          width: 90%;
+        }
+      }
+      .how-two{
+          flex-wrap: wrap-reverse;
+      }
+      
+    }
+  
+    footer {
+      padding: 20px 5vw;
+  
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+  
+      .menu {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .book {
+
+        padding-left: 5vw !important;
+        padding-right: 5vw !important;
+        
+        .bg-image{
+          display:none;
+
+        }
+
+
+    
+        h1 {
+          font-size: 2.5em;
+        }
+    
+        p {
+          font-size: 1.5em;
+          text-align: center;
+        }
+    
+        .search-area {
+          flex-direction: column;
+          gap: 10px;
+    
+          .filter span {
+            display: block;
+            margin: 5px 0;
+          }
+    
+          input[type="text"], input[type="date"] {
+            margin-top: 10px;
+            width: 100%;
+          }
+        }
+      }
+    
+  }
