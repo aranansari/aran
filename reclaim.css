@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+button {
+  font-family: "Epilogue", sans-serif;
+}
+
+h1 {
+  font-family: "Fraunces", sans-serif;
+  color: white;
+  font-weight: 300 !important;
+  font-size: 50px !important;
+}
+
+h1 b {
+  font-weight: 700 !important;
+}
+
+h2 {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Epilogue", sans-serif;
+  color: black;
+  font-size: 50px;
+}
+
+.navbar {
+  font-family: "Epilogue", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-nav {
+  width: 100% !important;
+}
+
+.navbar-brand {
+  font-family: "Fraunces" !important;
+  font-size: 25px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.background {
+  background-image: url("./images/full-size-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  height: 137vw;
+  top: 0;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.navbar-container {
+  max-width: 80%;
+  margin: 30px auto;
+  padding: 10px 10%;
+  background-color: #f4f2ec;
+  border-radius: 50px;
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 15% 50px 15%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 150px;
+}
+
+.intro img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonials img {
+  width: 100px;
+  height: 100%;
+}
+
+.nav-item {
+  padding-left: 1em !important;
+  padding-right: 1em !important;
+}
+
+.nav-link {
+  padding: .5rem 0px .1rem 0px !important;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: #1C4633 !important;
+}
+
+.nav-link-right {
+  font-family: "Fraunces" !important;
+  display: block;
+  background-color: #1C4633;
+  border: 3px solid #1C4633;
+  border-radius: 50px;
+  padding: 20px  !important;
+  color: white !important;
+  font-weight: 800;
+}
+
+.nav-link-right:hover {
+  background-color: #6D9784;
+  border: 3px solid #1C4633;
+  color: #1C4633 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.navbar-collapse {
+  gap: 100px;
+}
+
+.text-black {
+  color: black !important;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.sections-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-one {
+  background-size: cover;
+  background-position: center;
+  -webkit-box-flex: 65;
+      -ms-flex: 65;
+          flex: 65;
+}
+
+.mt-4 {
+  margin-left: 80px;
+}
+
+.section-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 20%;
+  gap: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-two img {
+  height: 500px;
+}
+
+.section-three {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 20%;
+  gap: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-three p {
+  color: white;
+}
+
+.section-three img {
+  width: 400px;
+  height: 100%;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  min-width: 60%;
+  text-align: center;
+}
+
+.content h1,
+.content h2,
+.content {
+  color: white;
+}
+
+.content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.content input[type="text"] {
+  width: 300px;
+  height: 40px;
+  padding: 0 10px;
+  font-family: "Epilogue", sans-serif;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.content button {
+  height: 40px;
+  background-color: black !important;
+  border: 0px solid transparent !important;
+  font-family: "Epilogue", sans-serif;
+  -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.rounded-end {
+  border-radius: 0 50px 50px 0 !important;
+}
+
+.rounded-start {
+  border-radius: 50px 0 0 50px !important;
+}
+
+.content button:hover {
+  background-color: #1B4965 !important;
+}
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #1C4633;
+  padding-bottom: 3px;
+  overflow: hidden;
+}
+
+.underline-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  /* Adjust based on your preference */
+  background-color: #1C4633;
+  /* Adjust based on your underline color */
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.underline-hover:hover::before {
+  left: 0;
+  right: 0;
+}
+
+/* 
+  .btn-custom-two{
+    background-color:#1B4965 !important;
+    border: 0px solid transparent !important;
+      font-size:24px;
+      font-family: $secondaryFont, sans-serif;
+  }
+  
+  .btn-custom-one{
+    background-color: #22543D !important;
+    border: 0px solid transparent !important;
+    font-weight: 600;
+    font-family: $secondaryFont, sans-serif;
+  } */
+/*# sourceMappingURL=reclaim.css.map */
