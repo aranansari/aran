@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body {
+  background-color: #6D9784 !important;
+}
+
 button {
   font-family: "Epilogue", sans-serif;
 }
@@ -31,6 +35,8 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
 }
 
 .navbar-nav {
@@ -42,17 +48,6 @@ h3 {
   font-size: 25px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-}
-
-.background {
-  background-image: url("./images/full-size-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  z-index: -1;
-  width: 100vw;
-  height: 137vw;
-  top: 0;
 }
 
 .semi-bold {
@@ -75,6 +70,7 @@ h3 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 150px;
+  z-index: 2;
 }
 
 .intro img {
@@ -129,6 +125,26 @@ h3 {
   cursor: pointer;
 }
 
+button {
+  font-family: "Fraunces" !important;
+  display: block;
+  background-color: #1C4633;
+  border: 3px solid #1C4633;
+  border-radius: 50px !important;
+  padding: 20px  !important;
+  width: 100%;
+  color: white !important;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: #6D9784;
+  border: 3px solid #1C4633;
+  color: #1C4633 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .navbar-icon {
   width: 30px;
   height: 30px;
@@ -158,11 +174,11 @@ h3 {
 }
 
 .section-one {
+  padding-bottom: 50px;
+  position: relative;
   background-size: cover;
   background-position: center;
-  -webkit-box-flex: 65;
-      -ms-flex: 65;
-          flex: 65;
+  z-index: 2;
 }
 
 .mt-4 {
@@ -170,14 +186,21 @@ h3 {
 }
 
 .section-two {
+  background-color: #f4f2ec;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 20%;
-  gap: 100px;
+  padding: 20px 20%;
+  gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
+}
+
+.section-two h2 {
+  font-size: 40px !important;
 }
 
 .section-two img {
@@ -185,14 +208,21 @@ h3 {
 }
 
 .section-three {
+  position: relative;
+  background-color: #1C4633;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 50px 20%;
-  gap: 100px;
+  padding: 120px 20%;
+  gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.section-three h1 {
+  font-weight: 700 !important;
+  line-height: 1;
 }
 
 .section-three p {
@@ -205,6 +235,10 @@ h3 {
   border-radius: 30px;
   -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.footer {
+  background-color: #1B4965;
 }
 
 .content {
@@ -287,6 +321,32 @@ h3 {
   right: 0;
 }
 
+.wood-grain-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background: url("./images/tree-grain-layer.png") no-repeat center center;
+  background-size: cover;
+  /* This will keep the aspect ratio of your image */
+  z-index: 1;
+  /* This will place the wood grain layer below other content but above the background color */
+  opacity: 10%;
+}
+
+.above {
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* 
   .btn-custom-two{
     background-color:#1B4965 !important;
@@ -301,4 +361,172 @@ h3 {
     font-weight: 600;
     font-family: $secondaryFont, sans-serif;
   } */
+@media only screen and (max-width: 768px) {
+  .intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 20px 40% 75px 5%;
+    gap: 0px;
+  }
+  .intro .text-left {
+    text-align: center !important;
+  }
+  .intro h1 {
+    font-size: 20px !important;
+    line-height: 1.5;
+    text-align: center !important;
+  }
+  .intro h1 b {
+    font-weight: 600 !important;
+  }
+  .intro .iphone {
+    position: absolute;
+    left: 65vw;
+    width: 200px;
+    z-index: 4;
+  }
+  h2 {
+    text-align: center !important;
+    font-size: 40px;
+  }
+  h3 {
+    text-align: center !important;
+    font-size: 24px;
+  }
+  .navbar-container {
+    max-width: 95% !important;
+    margin: 15px auto !important;
+    padding: 5px 5% !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navbar {
+    gap: 50px !important;
+  }
+  /*
+  .navbar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 18px !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 5px !important;
+  }
+*/
+  .nav-link-right {
+    display: none;
+  }
+  .content {
+    min-width: 100%;
+    text-align: center;
+  }
+  .testimonials {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 10px;
+  }
+  .testimonials img {
+    width: 75px;
+    height: auto;
+    -ms-flex-preferred-size: 34%;
+        flex-basis: 34%;
+  }
+  .section-two {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center !important;
+    padding: 20px 5%;
+  }
+  .section-three {
+    padding: 100px 5%;
+    text-align: center !important;
+  }
+  .section-three h1 {
+    font-size: 30px !important;
+  }
+  .above {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section-two,
+  .section-three {
+    gap: 30px;
+  }
+  .section-two img,
+  .section-three img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  .content input[type="text"] {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 2;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 125px;
+}
+
+.wave .shape-fill {
+  fill: #F4F2EC;
+}
+
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 122px;
+}
+
+.waves .shape-fill {
+  fill: #F4F2EC;
+}
+
+.navbar-toggler {
+  font-size: 1em !important;
+}
 /*# sourceMappingURL=reclaim.css.map */

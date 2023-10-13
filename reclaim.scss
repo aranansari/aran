@@ -8,6 +8,11 @@ $colorLight: #6D9784;
 $mainFont: 'Fraunces';
 $secondaryFont: 'Epilogue';
 
+
+html, body{
+  background-color: #6D9784 !important;
+}
+
   button{
     font-family: $secondaryFont, sans-serif;
   }
@@ -36,6 +41,7 @@ $secondaryFont: 'Epilogue';
   .navbar{
     font-family: $secondaryFont, sans-serif;
     display: flex;
+    flex-wrap: nowrap !important;;
   }
 
   .navbar-nav{
@@ -49,17 +55,6 @@ $secondaryFont: 'Epilogue';
       padding-bottom:0 !important;
   }
 
-  .background {
-    background-image: url("./images/full-size-background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    z-index: -1;
-    width:100vw;
-    height:137vw;
-    top:0;
-
-}
   
   .semi-bold{
     font-weight: 600;
@@ -78,6 +73,7 @@ $secondaryFont: 'Epilogue';
     padding:50px 15% 50px 15%;
     justify-content: space-around;
     gap:150px;
+  z-index: 2;
 
     img{
         width:100%;
@@ -128,6 +124,26 @@ $secondaryFont: 'Epilogue';
       cursor:pointer;
   }
 
+  button{
+      font-family: $mainFont !important;
+      display: block;
+      background-color: $colorDark;
+      border: 3px solid $colorDark;
+      border-radius: 50px !important;
+      padding:20px  !important;
+      width:100%;
+      color: white !important;
+      font-weight:800;
+  }
+
+  button:hover{
+    background-color: $colorLight;  
+    border: 3px solid $colorDark;
+    color:#1C4633 !important;
+    text-decoration: none;
+    cursor:pointer; 
+  }
+
   .navbar-icon {
     width: 30px;
     height: 30px;
@@ -155,9 +171,11 @@ $secondaryFont: 'Epilogue';
   
   
   .section-one {
+    padding-bottom:50px;
+    position: relative;
     background-size: cover;
     background-position: center;
-    flex:65;
+    z-index: 2;
   }
   
   .mt-4{
@@ -165,10 +183,16 @@ $secondaryFont: 'Epilogue';
   }
 
   .section-two{
+    background-color: #f4f2ec;
+    position: relative;
     display: flex;
-    padding: 50px 20%;
-    gap:100px;
+    padding: 20px 20%;
+    gap:50px;
     align-items: center;
+    z-index: 2;
+    h2{
+      font-size:40px !important;
+    }
 
     img{
       height: 500px;
@@ -176,10 +200,17 @@ $secondaryFont: 'Epilogue';
   }
 
   .section-three{
+    position: relative;
+    background-color: #1C4633;
     display: flex;
-    padding: 50px 20%;
-    gap:100px;
+    padding: 120px 20%;
+    gap:50px;
     align-items: center;
+
+    h1{
+      font-weight:700 !important;
+      line-height: 1;
+    }
 
     p{
       color:white;
@@ -193,7 +224,9 @@ $secondaryFont: 'Epilogue';
     }
   }
   
-
+  .footer{
+    background-color: #1B4965;
+  }
 
   .content {
     min-width:60%;
@@ -267,6 +300,27 @@ $secondaryFont: 'Epilogue';
     right: 0;
   }
 
+
+.wood-grain-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width:100vw;
+  background: url('./images/tree-grain-layer.png') no-repeat center center;
+  background-size: cover; /* This will keep the aspect ratio of your image */
+  z-index: 1; /* This will place the wood grain layer below other content but above the background color */
+  opacity: 10%;
+}
+
+.above{
+  z-index:2;
+  display: flex;
+  gap:50px;
+  align-items: center;
+
+}
   
   /* 
   .btn-custom-two{
@@ -283,3 +337,189 @@ $secondaryFont: 'Epilogue';
     font-family: $secondaryFont, sans-serif;
   } */
   
+
+  // Existing SCSS code...
+
+// Mobile responsiveness starts here
+
+@media only screen and (max-width: 768px) {
+
+  
+
+  .intro{
+
+.text-left{
+  
+  text-align: center !important;
+}
+
+    h1 {
+      font-size: 20px !important;
+      line-height: 1.5;
+      text-align: center !important;
+      b {
+        font-weight: 600 !important;
+      }
+    }
+
+
+    flex-direction: row;
+    padding: 20px 40% 75px 5%;
+    gap: 0px;
+    .iphone{
+      position:absolute;
+      left:65vw;
+      width:200px;
+      z-index: 4;
+    }
+
+  }
+
+
+  h2 {
+
+    text-align: center !important;
+    font-size: 40px;
+  }
+
+  h3 {
+
+    text-align: center !important;
+    font-size: 24px;
+  }
+  
+
+  .navbar-container {
+    max-width: 95% !important;
+    margin: 15px auto !important;
+    padding: 5px 5% !important;
+    justify-content: space-around;
+  }
+  .navbar{
+    gap:50px !important;
+  }
+
+  /*
+  .navbar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .navbar-brand {
+    font-size: 18px !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    padding: 5px !important;
+  }
+*/
+  .nav-link-right {
+    display: none; // Hide this on mobile if needed or adjust to better fit
+  }
+
+  .content {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .testimonials {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    img{
+      width:75px;
+      height:auto;
+    flex-basis: 34%;
+    }
+  }
+
+
+.section-two{
+  flex-direction: column;
+
+  text-align: center !important;
+
+  padding: 20px 5%;
+}
+
+.section-three{
+  padding:100px 5%;
+
+  text-align: center !important;
+  h1{
+    font-size:30px !important;
+  }
+}
+
+
+.above{
+  flex-direction: column-reverse;
+}
+
+  .section-two,
+  .section-three {
+    gap: 30px;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+    }
+  }
+
+  .content input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 125px;
+}
+
+.wave .shape-fill {
+  fill: #F4F2EC;
+}
+
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 122px;
+}
+
+.waves .shape-fill {
+  fill: #F4F2EC;
+}
+.navbar-toggler{
+  font-size:1em !important;
+}
