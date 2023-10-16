@@ -214,7 +214,7 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 120px 20%;
+  padding: 150px 20% 80px 20%;
   gap: 50px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -239,7 +239,54 @@ button:hover {
 }
 
 .footer {
-  background-color: #1B4965;
+  background-color: black !important;
+  color: white;
+  padding: 20px 10vw;
+  text-align: center;
+}
+
+.footer .company-name {
+  font-size: 2em;
+  font-family: "Fraunces";
+  font-weight: 800;
+}
+
+.footer .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer hr {
+  border-color: white;
+}
+
+.footer .legal {
+  font-size: 0.8em;
+}
+
+.footer .legal button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 0 auto;
+  padding: 0 !important;
+  width: 20%;
+}
+
+.footer .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Fraunces";
+  font-weight: 800;
+  gap: 50px;
 }
 
 .content {
@@ -346,6 +393,76 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 2;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 125px;
+}
+
+.wave .shape-fill {
+  fill: #F4F2EC;
+}
+
+.waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 122px;
+}
+
+.waves .shape-fill {
+  fill: #F4F2EC;
+}
+
+.navbar-toggler {
+  font-size: 1em !important;
+}
+
+.custom-shape-divider-top-1697228871 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1697228871 svg {
+  position: relative;
+  display: block;
+  width: calc(160% + 1.3px);
+  height: 133px;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1697228871 .shape-fill {
+  fill: #1C4633;
 }
 
 /* 
@@ -482,75 +599,28 @@ button:hover {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-}
-
-.wave {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  z-index: 2;
-}
-
-.wave svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 125px;
-}
-
-.wave .shape-fill {
-  fill: #F4F2EC;
-}
-
-.waves {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 2;
-}
-
-.waves svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 122px;
-}
-
-.waves .shape-fill {
-  fill: #F4F2EC;
-}
-
-.navbar-toggler {
-  font-size: 1em !important;
-}
-
-.custom-shape-divider-top-1697228871 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.custom-shape-divider-top-1697228871 svg {
-  position: relative;
-  display: block;
-  width: calc(160% + 1.3px);
-  height: 133px;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.custom-shape-divider-top-1697228871 .shape-fill {
-  fill: #1C4633;
+  .footer {
+    padding: 20px 5vw;
+  }
+  .footer .footer-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+  }
+  .footer .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+  }
+  .footer .legal button {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=reclaim.css.map */
