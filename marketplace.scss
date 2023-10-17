@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$colorDark:  #1C4633;
+$colorLight: #6D9784;
+
+
+$mainFont: 'Fraunces';
+$secondaryFont: 'Epilogue';
+
+body, html{
+    background-color: #1C4633;
+    z-index:-1000;
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin:0;
+}
+.app{
+    position:relative;
+    margin:25px;
+    z-index:2;
+}
+
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+
+.brand{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:10px;
+}
+
+h1{
+    color:white;
+    font-family: $mainFont;
+    font-weight:500;
+}
+
+img{
+    width:50px;
+    height:50px;
+}
+
+input{
+    width:100%;
+    margin:0px 5%;
+    height:40px;
+    border-radius: 100px;
+    border:0px solid transparent;
+}
+}
+
+.sidebar{
+    background-color:transparent;
+    min-height:100%;
+    width:15%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.main{
+    position: absolute;
+    background-color: white;
+
+}
+
+.wood-grain-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width:100vw;
+    background: url('./images/tree-grain-layer.png') no-repeat center center;
+    background-size: cover; /* This will keep the aspect ratio of your image */
+    z-index: 1; /* This will place the wood grain layer below other content but above the background color */
+    opacity: 5%;
+  }
