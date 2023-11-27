@@ -61,7 +61,7 @@ TxtType.prototype.tick = function() {
       months += 12;
     }
 
-    var ageString = years + " years, " + months + " months, " + days + " days, and " + hours + " hours old.";
+    var ageString = years + " years, " + months + " months, " + days + " days, and " + hours + " hours old";
     return ageString;
   }
 
@@ -264,6 +264,10 @@ const colorMap = {
   "#eee": {
     light: "#eee",
     dark: "#1a1a1a",
+  },
+  "#FFCCB6": {
+    light: "#FFCCB6",
+    dark: "#210D45",
   },
   // Add more color mappings as needed
 };
