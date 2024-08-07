@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle, #373737 63%, #424242 85%, #717171 100%);
+    position: relative;
+    font-family: 'Epilogue', sans-serif;
+
+}
+
+h1 {
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.block1 {
+    background-image:url("images/bowmkt.png");
+    background-size: cover;
+}
+
+.block2{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.block2 img {
+    width:70%;
+}
+
+.block3 {
+    display: flex;
+    gap:30px;
+    align-content: space-around;
+    padding: 20px;
+}
+
+
+.containerimg {
+    position: relative;
+    min-width: 60%; /* Adjust as needed */
+    min-height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding:10px;
+}
+
+.block3 img {
+    width:60%;
+}
+
+.rectangle2 {
+    position:absolute;
+    display:flex;
+    border: 2px solid white; /* White border for visibility */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.main2 {
+    background-color: white; /* White background for the main rectangle */
+    z-index: 2; /* Higher z-index to be on top */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Text color */
+}
+
+
+.transparentR2 {
+    background-color: transparent; /* Transparent background */
+    width:100%;
+    height:100%;
+    border: 2px solid white; /* White border for visibility */
+    z-index: 1; /* Lower z-index to be beneath the main rectangle */
+}
+
+
+.nav {
+    width:80vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index:0;
+    padding:20px;
+}
+
+.nav img {
+    height:50px;
+    width: auto;
+}
+
+.nav a {
+    font-size: 20px;
+    color: white;
+    font-weight: 200;
+}
+
+.content {
+    text-align: center;
+    width:85vw;
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    border: .5px solid white;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    box-shadow: 0px 0px 25px black;
+}
+
+
+.content-block {
+    background-color: rgba(255, 255, 255, 0);
+    width:100%;
+    border: 1px solid white;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.content-block.full-width {
+    grid-column: span 2;
+    align-items: center;
+}
+
+.content-block.banner{
+    background-color: white;
+    height:20px;
+    padding:0px;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none; /* Prevents interaction with the grid */
+    background-size: 200px 200px;
+    background-image: 
+        linear-gradient(to right, #686868 .5px, transparent 1px),
+        linear-gradient(to bottom, #686868 .5px, transparent 1px);
+    background-repeat: repeat;
+}
+
+/* code for animated marquee/banner */
+
+.marquee-container {
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 30px;
+  white-space: nowrap;
+  padding:.5em 0;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  animation: marquee-scroll 10s linear infinite;
+
+}
+
+.content2 {
+    display: flex;
+    align-items: center;
+    gap:20px;
+  padding: 0px; /* You can adjust this value for spacing */
+  padding-right:20px;
+}
+.content2 img{
+    width:20px;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/*Code relating to the Rectangles */
+
+.container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.rectangle {
+    position: absolute;
+    display:flex;
+    gap:40px;
+    border: 2px solid white; /* White border for visibility */
+    box-sizing: border-box;
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.pill {
+    position: absolute;
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: white; 
+    color: black;  
+    border: 2px solid white;  
+    border-radius: 100px;  
+    padding: 10px;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 20px;
+    transition: transform 0.5s ease;  
+    cursor: pointer;  
+    box-sizing: border-box;  
+    text-decoration: none;  
+    z-index: 2;
+}
+
+.pill-link {
+    text-decoration: none;  
+    color: inherit; 
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;  
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.transparentR {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border for visibility */
+    width:90%;
+    height:70%;
+    z-index: 1; /* Lower z-index to be beneath the main rectangle */
+}
+
+.transparentP {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border for visibility */
+    width:70%;
+    height: 50px;
+    z-index: 1; /* Lower z-index to be beneath the main rectangle */
+}
+
+.main {
+    background-color: white; /* White background for the main rectangle */
+    width: 90%;
+    height: 70%;
+    z-index: 2; /* Higher z-index to be on top */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 16px; /* Adjust font size as needed */
+    color: black; /* Text color */
+}
+
+#top-left-rectangle {
+    transform: translate(-10px, -10px); /* Offset to the top-left */
+}
+
+#bottom-right-rectangle {
+    transform: translate(10px, 10px); /* Offset to the bottom-right */
+}
+
+.container:hover #top-left-rectangle {
+    transform: translate(-10px,10px); /* Move further on hover */
+}
+
+.container:hover #bottom-right-rectangle {
+    transform: translate(10px, -10px); /* Move further on hover */
+}
+
+
+
+
+#top-left-pill {
+    transform: translate(5px, 5px); /* Offset to the top-left */
+}
+
+#bottom-right-pill {
+    transform: translate(10px, 10px); /* Offset to the bottom-right */
+}
+
+.container:hover #top-left-pill {
+    transform: translate(0px,0px); /* Move further on hover */
+}
+
+.container:hover #bottom-right-pill {
+    transform: translate(0px, 0px); /* Move further on hover */
+}
+
+
+/*Button stuff*/
+
+
+.containerB {
+    position: relative;
+    width:75px;
+    height:25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    
+}
+
+.button {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid white; /* Consistent border */
+    color: black;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width:75px;
+    height:25px;
+}
+
+.button-link{
+    text-decoration: none;  
+    color: inherit; 
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.transparentB {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border for visibility */
+    width:100%;
+    height:25px;
+    z-index: 1; /* Lower z-index to be beneath the main rectangle */
+}
+
+
+#top-left-button {
+    transform: translate(0px, 0px); /* Offset to the top-left */
+}
+
+#bottom-right-button {
+    transform: translate(0px, 0px); /* Offset to the bottom-right */
+}
+
+.containerB:hover #top-left-button {
+    transform: translate(10px,10px); /* Move further on hover */
+}
+
+.containerB:hover #bottom-right-button {
+    transform: translate(5px, 5px); /* Move further on hover */
+}
+
+
+
+
+.container-3 {
+    display: flex;
+    padding:0px !important;
+}
+
+.tri-block{
+    border: 1px solid white;
+    padding: 50px;
+    display:flex;
+    flex-direction: column;
+}
+
+
+/*nav bar hover effect */
+
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    font-weight: 200;
+    padding-bottom:5px;
+  }
+  
+  .nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    -webkit-transition: width 0.3s ease, -webkit-transform 0.3s ease;
+    transition: width 0.3s ease, -webkit-transform 0.3s ease;
+    transition: width 0.3s ease, transform 0.3s ease;
+    transition: width 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  
+  
+  .nacv a:hover {
+    font-weight: bold;
+  }
+  
+
+  /* animation stuff */
+
+  .layout {
+    position: relative;
+    width: 25vw;
+    height: 15vw;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    border: .5px dashed white;
+    opacity: 0;
+    animation: drawLine 4s forwards;
+}
+
+.horizontal {
+    width: 30%;
+    height: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    animation-delay: 1s;
+}
+
+
+.horizontal2 {
+    left: 30%;
+    width: 70%;
+    height: 0;
+    top: 60%;
+    transform: translateY(-50%);
+    animation-delay: 2s;
+}
+
+.half-vertical {
+    height: 60%;
+    width: 0;
+    top:0%;
+    left: 60%;
+    transform: translateX(-50%);
+    animation-delay: 4s;
+}
+
+.off-center {
+    height: 100%;
+    width: 0;
+    left: 30%; /* Non-centered */
+    transform: translateX(-50%);
+    
+}
+
+.smaller-vertical {
+    height: 50%; /* Split a smaller rectangle */
+    width: 0;
+    left: 75%;
+    top: 60%;
+    transform: translateX(-50%);
+    animation-delay: 3s;
+}
+
+@keyframes drawLine {
+    0% {
+        opacity: 1;
+        transform: scaleX(0) scaleY(0);
+    }
+    25% {
+        transform: scaleX(1) scaleY(1);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) scaleY(1);
+    }
+}
