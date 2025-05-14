@@ -1,163 +1,326 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
-/* Add some basic styling to make the page look nice */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fbfbfa;
-    margin: 0px;
-  }
-  .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin:0px;
-      padding: 10px;
-      background-color: #ffffff;
-      border-bottom: solid;
-      border-bottom-width: 2px;
-      border-bottom-color: #e8e8e9ff;
-  }
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+  background: #fff;
+  color: #0f0f0f;
+}
 
-  .left-nav {
-      display: flex;
-  }
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 28px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+}
 
-  .left-nav p {
-      margin-right: 20px;
-  }
+.logo {
+  width:230px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #05ce78;
+}
 
-  .center-logo {
-      height: 50px;
-  }
+input::placeholder{
+  color:lightgray;
+}
 
-  .right-nav {
-      display: flex;
-  }
+.search-bar {
+  border:solid 1px lightgray;
+  flex-grow: 1;
+  margin: 0 20px 0 40px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px lightgray;
+}
 
-  .right-nav p {
-      margin-left: 20px;
-  }
+.category-links {
+  display: flex;
+  gap: 10px;
+  padding: 12px 24px;
+  margin: 0 auto;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+}
 
-  .header {
-    background-color: #fbfbfa;
-    color: #282828;
-    padding: 20px;
-    text-align: center;
-  }
-  .header h1 {
-    margin: 0;
-  }
-  .main-content {
-    padding: 20px;
-  }
-  .campaign-image {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-  }
-  .campaign-info {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .campaign-info h2 {
-    margin: 0;
-  }
-  .campaign-info p {
-    margin: 20px 0;
-  }
-  .pledge-options {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-  }
-  .pledge-option {
-    background-color: #FFFFFF;
-    border: 1px solid #333;
-    padding: 20px;
-    text-align: center;
-    width: 30%;
-  }
-  .pledge-option h3 {
-    margin: 0;
-  }
-  .pledge-option p {
-    margin: 20px 0;
-  }
-  .pledge-option button {
-    background-color: #333;
-    color: #FFFFFF;
-    padding: 10px 20px;
-    margin-top: 20px;
-  }
-  .header {
-    text-align: center;
-    padding: 30px 0;
-  }
+.category-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight:500;
+}
 
-  .campaign-image {
-    float: left;
-    margin-right: 20px;
-  }
+.top-actions a {
+  margin-left: 16px;
+  font-size: 0.9rem;
+  color: #333;
+  text-decoration: none;
+}
 
-  .campaign-stats {
-    background-color: #eee;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.hero {
+  background-color: #FBFCFA;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .campaign-stats .progress-bar {
-    width: 100%;
-    height: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-  }
+.project-content {
+  margin:0 auto;
+  text-align: center;
+  justify-content: center;
+  width:60%;
+  flex: 2;
+}
 
-  .campaign-stats .progress-bar .progress {
-    height: 100%;
-    background-color: #4CAF50;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
 
-  .pledge-option button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-  }
+.project-details {
+  display:flex;
+  align-items:flex-start;
+}
 
-  .social-buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+h1{
+  margin: 0;
+}
 
-  .social-buttons a {
-    display: inline-block;
-    margin-right: 10px;
-  }
+h2{
+  font-weight: 500;
+  font-size: 20px;
+}
 
-  .social-buttons img {
-    height: 30px;
-    width: 30px;
-  }
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0 30px 0;
+}
 
-  .small-text {
-    font-size: 14px;
-    color: #666;
-  }
+.img-badge{
+  max-width:65%;
+}
 
-  .progress-stat {
-      width: 100%;
-  }
+.project-image {
+  width:100%;
+}
+
+.sidebar {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.pledge-summary {
+  border: 0px solid #ddd;
+  padding: 0px 20px;
+  border-radius: 8px;
+}
+
+.pledge-amount {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top:10px;
+}
+
+.pledge-goal{
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.back-button {
+  margin-top: 20px;
+  background: #028858;
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.email-button {
+  background: #028858;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  font-size: .95rem;
+  cursor: pointer;
+}
+
+.disclaimer {
+  font-size: 0.75rem;
+  margin-top: 12px;
+  color: #555;
+}
+
+.badges {
+  display: flex;
+  gap: 6px;
+  padding: 5px 0px;
+  font-size: 0.75rem;
+  align-items: center;
+}
+
+.badge {
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.badge-icon img{
+  max-width:20px;
+}
+
+.info-strip {
+  background: #F5F2EB;
+  border-bottom: 1px solid #e4d7bc;
+  padding: 16px 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #444;
+  margin: 8px 0;
+}
+
+.tab-nav {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 0 40px;
+  background: white;
+  align-items: center;
+  position: sticky;
+  top: 72px;
+  z-index: 999;
+}
+
+.tab {
+  padding: 16px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-color: #028858;
+  color: #028858;
+}
+
+.new-label, .count {
+  background-color: #eee;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  margin-left: 4px;
+  border-radius: 4px;
+}
+
+.actions{
+  margin:20px 0;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+}
+
+.actions .link{
+  border:none 0px #FBFCFA;
+  background-color: #FBFCFA;
+
+}
+
+.link img {
+  width:20px;
+}
+
+.reminder {
+  border: solid 1px lightgray;
+  background-color: #FBFCFA;
+  padding:10px;
+}
+
+button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+}
+
+.campaign-section {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.campaign-story {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.campaign-story h2, .campaign-story h3 {
+  margin-top: 32px;
+  color: #111;
+}
+
+.story-image {
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 8px;
+}
+
+.campaign-story ul {
+  padding-left: 20px;
+}
+
+.reward-sidebar {
+  flex: 1;
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reward-tier {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fafafa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.reward-amount {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #028858;
+}
+
+.reward-description {
+  font-size: 0.95rem;
+  margin: 10px 0;
+}
+
+.select-reward {
+  background: #028858;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-top: 8px;
+}
