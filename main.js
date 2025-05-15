@@ -234,10 +234,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById("age").innerHTML = getAge("05-04-1997");
 
+//project slide stuff
+
+const tabs = document.querySelectorAll('.project-tab');
+const panels = document.querySelectorAll('.detail-panel');
+
+let activePanelId = null;
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const targetId = tab.dataset.project;
+    const targetPanel = document.getElementById(targetId);
+
+    // If clicking the same tab, collapse it
+    if (activePanelId === targetId) {
+      targetPanel.classList.remove('active');
+      tab.querySelector('.toggle-icon').textContent = '+';
+      activePanelId = null;
+      return;
+    }
+
+    // Collapse all panels
+    panels.forEach(panel => panel.classList.remove('active'));
+    tabs.forEach(t => t.querySelector('.toggle-icon').textContent = '+');
+
+    // Expand the new panel
+    targetPanel.classList.add('active');
+    tab.querySelector('.toggle-icon').textContent = '–';
+    activePanelId = targetId;
+  });
+});
+
+
+// i don't know what but seems important
 const projectTabs = document.querySelectorAll(".project-tab");
 const projectInfo = document.querySelectorAll(".project-info");
 const body = document.body;
 const toggleSwitch = document.getElementById('toggle');
+
 
 // Define the colorMap for light mode colors and their corresponding dark mode colors
 const colorMap = {

@@ -266,10 +266,10 @@ p {
     position: fixed;
     bottom: 30px;
     width: 100%;
-    padding-left:300px;
-    padding-right:300px;
+    padding-right:20%;
+    padding-left:20%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 auto;
     justify-self: center;
     background: transparent;
@@ -535,7 +535,7 @@ body.dark-mode .work-section, .company-subtitle, .job-dates {
 }
 
 .company-subtitle {
-  font-size: 25px;
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 300;
   color: #666;
@@ -557,6 +557,8 @@ body.dark-mode .work-section, .company-subtitle, .job-dates {
 .job-bullets {
   list-style: none;
   padding-left: 0;
+  font-family: "Sometype Mono", monospace;
+  font-size: 15px;
 }
 
 .job-bullets li {
@@ -628,40 +630,10 @@ body.dark-mode .skill-group {
   }
 
 
-  /* Project Tab Styles */
-#project-tabs {
-    display: flex;
-    flex-wrap: wrap; /* Allow tabs to wrap to the next line on smaller screens */
-    justify-content: center; /* Center-align the tabs */
-    gap: 10px; /* Add spacing between tabs */
-    background-color: transparent;
-}
 
-.project-tab {
-    font-weight: 600;
-    margin: 5px; /* Adjust margins for smaller screens */
-    padding: 10px 15px; /* Adjust padding for smaller screens */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 18px; /* Reduce font size for smaller screens */
-    border: 1px solid #26262B;
-    color: #26262B;
-    border-radius: 30px;
-    transition: color 0.5s ease, background-color 0.5s ease;
-    text-align: center; /* Center-align tab text */
-    flex: 1; /* Make tabs evenly distribute across the container */
-}
-
-/* Add media query for small screens (e.g., smartphones) */
-@media screen and (max-width: 768px) {
-    .project-tab {
-        font-size: 16px;
-    }
-}
 
 body.dark-mode .project-tab {
     color: #FFF;
-    border: 1px solid #FFF;
 }
 
 .project-tab:hover {
@@ -670,7 +642,6 @@ body.dark-mode .project-tab {
 }
 
 body.dark-mode .project-tab:hover {
-    border: 1px solid #26262B;
     background-color: #FFF;
     color: #26262B;
 }
@@ -776,4 +747,170 @@ body.dark-mode .project-tab:hover {
         height: 50px;
     }
 
+}
+
+.project-headline{
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 200px 50px 200px;
+}
+
+.project-headline h3{
+    font-weight: 400 !important;
+}
+
+.projects-container {
+  padding: 0 50px;
+  display: flex;
+  gap: 20px;
+  font-family: sans-serif;
+}
+
+.project-list {
+  flex: 1;
+  max-width: 200px;
+}
+
+.project-tab {
+  padding: 10px 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 300;
+  transition: background 0.3s;
+}
+
+
+.toggle-icon {
+  font-weight: bold;
+}
+
+.project-details {
+  flex: 2;
+  padding: 10px;
+
+}
+
+.detail-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.detail-panel.active {
+  max-height: 2000px; /* enough to fit any project */
+  opacity: 1;
+  pointer-events: auto;
+  margin-bottom: 40px;
+}
+
+.detail-panel a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.detail-panel a img {
+  width: 20px;
+}
+
+.project-name {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.project-subtitle {
+  padding-top:5px;
+  gap: 5px;
+  display:flex;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #666;
+  align-items: center;
+}
+
+.project-description {
+  font-weight: 300;
+  font-family: "Sometype Mono", monospace;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.project-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc; /* light gray */
+  margin: 12px 0; /* spacing above and below */
+  width: 100%;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+
+  .projects-container {
+
+    flex-direction: column;
+  }
+
+  .project-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    gap: 12px;
+    max-width: 100%;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .project-tab {
+    flex: 0 0 auto;
+    padding: 10px 16px;
+    font-size: 16px;
+    white-space: nowrap;
+    background: #f2f2f2;
+    border-radius: 6px;
+  }
+
+  .project-details {
+    padding: 0;
+  }
+
+  .project-subtitle {
+    font-size:15px;
+  }
+
+  .project-headline {
+    padding: 0 16px 32px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+
+  .detail-panel li {
+    font-size: 10px;
+  }
+
+ .detail-panel {
+    display: none;
+  }
+
+  .detail-panel.active {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .toggle-icon {
+    display:none;
+  }
 }
