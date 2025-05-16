@@ -144,7 +144,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: left;
-    align-self: start;
+    align-self: flex-end;
+    margin-bottom:100px;
     gap:50px;
 }
 
@@ -209,7 +210,7 @@ p {
 
 .subtitle{
     font-size: 25px; 
-    padding-top:20px; 
+    padding-top:20px;
 }
 
 .separator{
@@ -684,9 +685,9 @@ body.dark-mode .project-tab:hover {
 
 
     .content-left {
-        align-items: center;
-        text-align: center;
+        display: flex;
         margin-bottom: 20px;
+        align-self:flex-end;
     }
 
     .content img {
@@ -858,6 +859,7 @@ body.dark-mode .project-tab:hover {
 @media (max-width: 768px) {
 
 
+
   .projects-container {
 
     flex-direction: column;
@@ -913,4 +915,139 @@ body.dark-mode .project-tab:hover {
   .toggle-icon {
     display:none;
   }
+}
+
+
+    .center-stack {
+      position: absolute;
+
+      top: 150px;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      font-family: sans-serif;
+    }
+
+    .aran, .ansari, .an-block {
+      font-size: 150px;
+      font-weight: 900;
+      white-space: nowrap;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      color: $text-color;
+    }
+
+    .aran, .ansari {
+      position: absolute;
+      left: 0;
+    }
+
+    .aran {
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    .ansari {
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    .ansari .fade-out {
+      color: transparent;
+    }
+
+    .accordion {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .an-block {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      color: transparent;
+      -webkit-text-stroke: 1.5px $text-color;
+      text-stroke: 1.5px $text-color;
+      line-height: 1.1;
+    }
+
+    .an-block .fade-out {
+      color: transparent;
+      -webkit-text-stroke: 1.5px transparent;
+      text-stroke: 1.5px transparent;
+    }
+
+body.dark-mode .aran, body.dark-mode .ansari {
+      color: white;
+    }
+
+body.dark-mode .an-block {
+
+      -webkit-text-stroke: 1.5px white;
+      text-stroke: 1.5px white;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .center-stack {
+      position: absolute;
+      top: 70%;
+      left:5%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+      font-family: sans-serif;
+    }
+
+    .aran, .ansari, .an-block {
+      font-size: 50px;
+      font-weight: 900;
+      white-space: nowrap;
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      color: $text-color;
+    }
+
+    .aran, .ansari {
+      position: absolute;
+      left: 0;
+    }
+
+    .aran {
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    .ansari {
+      transform: translateY(0);
+      z-index: 2;
+    }
+
+    .ansari .fade-out {
+      color: transparent;
+    }
+
+    .accordion {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .an-block {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      color: transparent;
+      -webkit-text-stroke: 1.5px $text-color;
+      text-stroke: 1.5px $text-color;
+      line-height: 1.1;
+    }
+
+    .an-block .fade-out {
+      color: transparent;
+      -webkit-text-stroke: 1.5px transparent;
+      text-stroke: 1.5px transparent;
+    }  
+
 }

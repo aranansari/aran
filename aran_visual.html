@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>aran ansari swap</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f8f8f5;
+      font-family: sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .center-stack {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: max-content;
+    }
+
+    .aran, .ansari, .an-block {
+      font-size: 100px;
+      font-weight: 900;
+      white-space: nowrap;
+      transition: transform 1.2s ease, opacity 1.2s ease;
+    }
+
+    .aran, .ansari {
+      position: absolute;
+      left: 0;
+    }
+
+    .aran {
+      transform: translateY(-150px); /* starts on top */
+      z-index: 2;
+    }
+
+    .ansari {
+      transform: translateY(150px); /* starts on bottom */
+      z-index: 2;
+    }
+
+    .ansari .fade-out {
+      color: transparent;
+    }
+
+    .accordion {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .an-block {
+      position: absolute;
+      left: 0;
+      opacity: 1;
+      color: transparent;
+      -webkit-text-stroke: 1.5px black;
+      text-stroke: 1.5px black;
+      line-height: 1.1;
+      transition: transform 1.2s ease, opacity 1.2s ease;
+    }
+
+    .an-block .fade-out {
+      color: transparent;
+      -webkit-text-stroke: 1.5px transparent;
+      text-stroke: 1.5px transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="center-stack">
+    <div class="aran" id="aran">aran</div>
+
+    <div class="accordion" id="accordion">
+      <div class="an-block" data-index="0"><span class="fade-out">ar</span>an</div>
+      <div class="an-block" data-index="1"><span class="fade-out">ar</span>an</div>
+      <div class="an-block" data-index="2"><span class="fade-out">ar</span>an</div>
+      <div class="an-block" data-index="3"><span class="fade-out">ar</span>an</div>
+      <div class="an-block" data-index="4"><span class="fade-out">ar</span>an</div>
+    </div>
+
+    <div class="ansari" id="ansari"><span class="fade-out">ar</span>ansari</div>
+  </div>
+
+  <script>
+    const aran = document.getElementById("aran");
+    const ansari = document.getElementById("ansari");
+    const anBlocks = document.querySelectorAll(".an-block");
+
+    const blockSpacing = 60;
+    let nameSwapped = false;
+    let anExpanded = true;
+
+    // 1. Name Swap Animation (every 4 seconds)
+    setInterval(() => {
+      nameSwapped = !nameSwapped;
+
+      aran.style.transform = nameSwapped ? `translateY(100%)` : `translateY(0)`;
+      ansari.style.transform = nameSwapped ? `translateY(-100%)` : `translateY(0)`;
+    }, 4000);
+
+    // 2. an-block Animation (every 2 seconds)
+    setInterval(() => {
+      anExpanded = !anExpanded;
+
+      anBlocks.forEach((block, i) => {
+        const offset = (i - 2) * (anExpanded ? blockSpacing : blockSpacing / 5);
+        block.style.opacity = anExpanded ? 1 : 0;
+        block.style.transform = `translateY(${offset}px)`;
+      });
+    }, 2000);
+
+    // 3. Initial an-block positioning
+    anBlocks.forEach((block, i) => {
+      const offset = (i - 2) * blockSpacing;
+      block.style.transform = `translateY(${offset}px)`;
+    });
+
+  </script>
+
+</body>
+</html>

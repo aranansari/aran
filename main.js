@@ -234,6 +234,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById("age").innerHTML = getAge("05-04-1997");
 
+//accordion stuff
+
+    const aran = document.getElementById("aran");
+    const ansari = document.getElementById("ansari");
+    const accordion = document.getElementById("accordion");
+    const anBlocks = accordion.querySelectorAll(".an-block");
+
+    const blockSpacing = 30; // pixels between each an-block
+    const centerY = 0; // relative to center-stack (which is vertically centered)
+
+    let isOpen = false;
+
+    setInterval(() => {
+      if (!isOpen) {
+        // Move aran and ansari apart
+        aran.style.transform = `translateY(-${blockSpacing * 2.5}px)`;
+        ansari.style.transform = `translateY(${blockSpacing * 2.5}px)`;
+
+        // Animate an-blocks outward from center
+        anBlocks.forEach((block, i) => {
+          const offset = (i - 2) * blockSpacing; // index 2 is center
+          block.style.opacity = 1;
+          block.style.transform = `translateY(${offset}px)`;
+        });
+
+      } else {
+        // Collapse everything
+        aran.style.transform = `translateY(0)`;
+        ansari.style.transform = `translateY(0)`;
+        anBlocks.forEach(block => {
+          block.style.opacity = 0;
+          block.style.transform = `translateY(0)`;
+        });
+      }
+
+      isOpen = !isOpen;
+    }, 2000);
+
 //project slide stuff
 
 const tabs = document.querySelectorAll('.project-tab');
